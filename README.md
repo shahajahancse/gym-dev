@@ -1,6 +1,6 @@
 # Admin
 
-A simple admin panel for Laravel 9.x
+A simple admin panel for Laravel 8.x
 
 ### Installation
 
