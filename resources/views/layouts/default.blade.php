@@ -69,6 +69,7 @@
 </head>
 
 <body>
+    {{-- top bar --}}
     <!-- header logo: style can be found in header-->
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light navbar-static-top" role="navigation">
@@ -148,7 +149,7 @@
                 }
             })
             ->get();
-            
+
             @endphp
             <div class="navbar-right ml-auto">
                 <ul class="navbar-nav nav flex" style="display: flex;flex-direction: row;flex-wrap: nowrap;gap: 10px;">
@@ -252,10 +253,12 @@
             </div>
         </nav>
     </header>
+
+    {{-- content body --}}
     <div class="wrapper">
-
-
+        {{-- left menu --}}
         <!-- Left side column. contains the logo and sidebar -->
+        {{-- fixed body left menu --}}
         <aside class="left-aside" style="min-height: 100vh;height: 100vh;">
             <!-- sidebar: style can be found in sidebar-->
             <section class="sidebar metismenu sidebar-res">
@@ -265,19 +268,18 @@
             <!-- /.sidebar -->
         </aside>
 
-
-
-        <!--            right side bar ----------->
+        <!-- right side bar ----------->
+        {{-- dynamic body content --}}
         <aside class="right-aside">
             @yield('content')
         </aside>
     </div>
     <!-- ./wrapper -->
-    <!-- Footer end -->
+
+
     <!-- SCRIPTS -->
     <!-- global js -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
