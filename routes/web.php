@@ -19,6 +19,7 @@ use App\Http\Controllers\PurchasePackageController;
 use App\Http\Controllers\SalesProductController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 include 'web_builder.php';
 include 'demo.php';
@@ -50,13 +51,11 @@ Route::get('/route-cache', function () {
     $exitCode = Artisan::call('route:cache');
     return '<h1>Routes cached</h1>';
 });
-
 //Clear Route cache:
 Route::get('/route-clear', function () {
     $exitCode = Artisan::call('route:clear');
     return '<h1>Route cache cleared</h1>';
 });
-
 //Clear View cache:
 Route::get('/view-clear', function () {
     $exitCode = Artisan::call('view:clear');
@@ -65,19 +64,7 @@ Route::get('/view-clear', function () {
 
 Auth::routes();
 
-// login2, register2 pages
-Route::view( 'login2', 'auth.login2' );
-Route::view( 'login3', 'auth.login3' );
-Route::view( 'register2', 'auth.register2' );
-Route::view( 'register3', 'auth.register3' );
-
-use Illuminate\Support\Facades\Route;
-
-Route::get( 'forgot-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'] )->name( 'password.request' );
-Route::post( 'forgot-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'] )->name( 'password.email' );
-Route::get( 'reset-password/{token}', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'] )->name( 'password.reset' );
-Route::post( 'reset-password', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'] )->name( 'password.update' );
-
+// fontend routes
 Route::get( '/welcome', [HomeController::class, 'index'] )->name( 'welcome' );
 Route::get( '/privacy', [HomeController::class, 'privacy'] )->name( 'privacy' );
 Route::get( '/terms_conditions', [HomeController::class, 'terms_conditions'] )->name( 'terms_conditions' );
@@ -91,14 +78,27 @@ Route::get( '/demo/request', [DemuRequestController::class, 'index'] )->name( 'd
 Route::post( '/demo/request', [DemuRequestController::class, 'request_sent'] )->name( 'demu_request.sent' );
 Route::get( '/about_us', [AboutController::class, 'index'] )->name( 'about' );
 Route::get( '/no_access_page', [HomeController::class, 'no_access'] )->name( 'no_access' ); // No access page
+//  fontend routes end
 
-// Route::view('welcome', 'auth.register3');
 
-// Route::get('/welcome', [HomeController::class, 'index'])->name('home');
-
+// backend routes
 Route::get( '/', function () {
     return view( 'index' );
 } )->middleware( 'auth' );
+
+
+
+// login2, register2 pages
+Route::view( 'login2', 'auth.login2' );
+Route::view( 'login3', 'auth.login3' );
+Route::view( 'register2', 'auth.register2' );
+Route::view( 'register3', 'auth.register3' );
+
+
+Route::get( 'forgot-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'] )->name( 'password.request' );
+Route::post( 'forgot-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'] )->name( 'password.email' );
+Route::get( 'reset-password/{token}', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'] )->name( 'password.reset' );
+Route::post( 'reset-password', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'] )->name( 'password.update' );
 
 // Route::resource('users', 'UsersController');
 

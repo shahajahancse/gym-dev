@@ -14,15 +14,13 @@ class HomeController extends Controller
 {
     public function index()
     {
-
-        $SiteProfile = SiteProfile::first();
-        $AboutUs     = AboutUs::first();
-        $SiteFeature = SiteFeature::all();
-        $SiteTrainer = SiteTrainer::all();
-        $offers      = Offer::where('status', 1)->get();
-        $classes     = Package_class::where('status', 1)->get();
-
-        return view( 'welcome', compact( 'SiteProfile', 'AboutUs', 'SiteFeature', 'SiteTrainer', 'offers', 'classes' ) );
+        // $SiteProfile = SiteProfile::first();
+        // $AboutUs     = AboutUs::first();
+        // $SiteFeature = SiteFeature::all();
+        // $SiteTrainer = SiteTrainer::all();
+        // $offers      = Offer::where('status', 1)->get();
+        // $classes     = Package_class::where('status', 1)->get();
+        return view( 'frontend.index');
     }
 
     public function privacy()
