@@ -365,7 +365,7 @@ button {
     left: 0;
     width: 60%;
     height: 100%;
-    background: url(../images/breadcrumbs_shape.png) center center / cover no-repeat;
+    background: url("{{ asset('../images/breadcrumbs_shape.png') }}") center center / cover no-repeat;
 }
 
 .wsus___breadcrumb_text {
@@ -946,7 +946,6 @@ header {
 }
 
 .wsus__menu_offconvas .offcanvas {
-    background: url(../images/offcanvas_bg.jpg) center center / cover no-repeat;
     padding: 80px 40px;
     z-index: 99999;
 }
@@ -1405,7 +1404,6 @@ header {
 .wsus__program_area::after {
     position: absolute;
     content: "";
-    background: url(../images/program_shapes.png) center center / cover no-repeat;
     width: 560px;
     height: 510px;
     bottom: -60px;
@@ -1423,7 +1421,7 @@ header {
 .wsus__machine_bg::before {
     position: absolute;
     content: "";
-    background: url(../images/machine_shapes_1.png) center center / cover no-repeat;
+    background: url("{{ asset('../images/machine_shapes_1.png') }}") center center / cover no-repeat;
     width: 205px;
     height: 185px;
     top: -170px;
@@ -1434,7 +1432,7 @@ header {
 .wsus__machine_bg::after {
     position: absolute;
     content: "";
-    background: url(../images/machine_shapes_2.png) center center / cover no-repeat;
+    background: url("{{ asset('../images/machine_shapes_2.png') }}") center center / cover no-repeat;
     width: 170px;
     height: 185px;
     top: -30px;
@@ -1772,7 +1770,7 @@ header {
 .wsus__timetable::after {
     position: absolute;
     content: "";
-    background: url(../images/time_table_shapes.png) center center / cover no-repeat;
+    background: url("{{ asset('../images/time_table_shapes.png') }}") center center / cover no-repeat;
     width: 115px;
     height: 200px;
     bottom: 20%;
@@ -1905,7 +1903,6 @@ header {
     left: 0;
     height: 665px;
     width: 1000px;
-    background: url(../images/video_shape.png);
 }
 
 .wsus__video_area_btn .play_btn {
@@ -2045,7 +2042,7 @@ header {
 .wsus__pricing::after {
     position: absolute;
     content: "";
-    background: url(../images/pricing_shape.png) center center / cover no-repeat;
+    background: url("{{ asset('../images/pricing_shape.png') }}") center center / cover no-repeat;
     width: 120px;
     height: 205px;
     bottom: 25%;
@@ -2125,7 +2122,7 @@ header {
 .wsus__pricing_page::before {
     position: absolute;
     content: "";
-    background: url(../images/pricing_shape_2.png) center center / cover no-repeat;
+    background: url("{{ asset('../images/pricing_shape_2.png') }}") center center / cover no-repeat;
     width: 120px;
     height: 300px;
     top: 200px;
@@ -2141,7 +2138,7 @@ header {
     position: relative;
     padding-left: 150px;
     padding-right: 150px;
-    background: url(../images/testimonial_bg.png) center center / cover no-repeat;
+    background: url("{{ asset('../images/testimonial_bg.png') }}") center center / cover no-repeat;
 }
 
 .wsus__testimonial_area::after {
@@ -2151,7 +2148,6 @@ header {
     left: 130px;
     width: 250px;
     height: 250px;
-    background: url(../images/massage_shape.png) center center / cover no-repeat;
 }
 
 .wsus__testimonial_content {
@@ -2254,7 +2250,6 @@ header {
 .wsus__slider_small_img::after {
     position: absolute;
     content: "";
-    background: url(../images/testimonial_slider_shape.png) center center / cover no-repeat;
     width: 76px;
     height: 76px;
     top: -8px;
@@ -2286,7 +2281,6 @@ header {
     right: 160px;
     width: 448px;
     height: 390px;
-    background: url(../images/testimonial_shape.png) center center / cover no-repeat;
     z-index: -1;
 }
 
@@ -2620,7 +2614,6 @@ header {
     bottom: 0;
     width: 300px;
     height: 250px;
-    background: url(../images/footer_shape.png) center center / cover no-repeat;
     z-index: 0;
 }
 
@@ -2870,7 +2863,7 @@ header {
 }
 
 .wsus__pricing_2 {
-    background: url(../images/Pricing_2_bg.jpg) center center / cover no-repeat;
+    background: url("{{ asset('images/Pricing_2_bg.jpg') }}") center center / cover no-repeat;
 }
 
 .wsus__pricing_2_overly {
@@ -3846,7 +3839,7 @@ header {
 }
 
 .wsus__join_event_bottom {
-    background: url(../images/join_event_form_bg.jpg) center center / cover no-repeat;
+    background: url("{{ asset('images/join_event_form_bg.jpg') }}") center center / cover no-repeat;
 }
 
 .wsus__join_event_form {
@@ -3884,7 +3877,7 @@ header {
 
 .wsus__join_event_right {
     padding: 90px 50px;
-    background: url(../images/cta_bg.jpg) center center / cover no-repeat;
+    background: url("{{ asset('images/cta_bg.jpg') }}") center center / cover no-repeat;
 }
 
 .wsus__join_event_right .wsus__section_heading_3 {
@@ -4248,15 +4241,15 @@ header {
 }
 
 .home_4_dark .wsus__program_area::after {
-    background: url(../images/program_shapes_dark.png);
+    background: url("{{ asset('images/program_shapes_dark.png') }}");
 }
 
 .home_4_dark .wsus__machine_bg::before {
-    background: url(../images/machine_shapes_1_dark.png);
+    background: url("{{ asset('images/machine_shapes_1_dark.png') }}");
 }
 
 .home_4_dark .wsus__machine_bg::after {
-    background: url(../images/machine_shapes_2_dark.png);
+    background: url("{{ asset('images/machine_shapes_2_dark.png') }}");
 }
 
 .home_4_dark .wsus__machine_bg {
@@ -4312,7 +4305,7 @@ header {
 }
 
 .home_4_dark .wsus__timetable::after {
-    background: url(../images/time_table_shapes_dark.png);
+    background: url("{{ asset('images/time_table_shapes_dark.png') }}");
 }
 
 .home_4_dark .wsus__video .wsus__section_headeing h2 {
@@ -4378,7 +4371,7 @@ header {
 }
 
 .home_4_dark .wsus__pricing::after {
-    background: url(../images/pricing_shape_dark.png);
+    background: url("{{ asset('images/pricing_shape_dark.png') }}");
 }
 
 .home_4_dark .wsus__single_pricing:hover {
@@ -4386,7 +4379,7 @@ header {
 }
 
 .home_4_dark .wsus__testimonial::after {
-    background: url(../images/testimonial_shape_dark.png);
+    background: url("{{ asset('images/testimonial_shape_dark.png') }}");
 }
 
 .home_4_dark .wsus__blog_text .title {
@@ -4463,7 +4456,7 @@ header {
 .wsus__why_choose_us::after {
     position: absolute;
     content: "";
-    background: url(../images/why_choose_shapes.png);
+    background: url("{{ asset('images/why_choose_shapes.png') }}");
     width: 120px;
     height: 210px;
     top: -120px;
@@ -4578,7 +4571,7 @@ header {
 .wsus__counter::after {
     position: absolute;
     content: "";
-    background: url(../images/counter_shapes.png);
+    background: url("{{ asset('images/counter_shapes.png') }}");
     width: 115px;
     height: 200px;
     top: 0;
@@ -5256,7 +5249,7 @@ header {
 .wsus__trainer_details::after {
     position: absolute;
     content: "";
-    background: url(../images/trainer_details_shapes.png) center center / cover no-repeat;
+    background: url("{{ asset('images/trainer_details_shapes.png') }}") center center / cover no-repeat;
     width: 120px;
     height: 310px;
     bottom: 0;
@@ -5293,7 +5286,7 @@ header {
 .wsus__experience::after {
     position: absolute;
     content: "";
-    background: url(../images/experience_shapes.png) center center / cover no-repeat;
+    background: url("{{ asset('images/experience_shapes.png') }}") center center / cover no-repeat;
     width: 120px;
     height: 310px;
     bottom: 0;
@@ -5337,7 +5330,7 @@ header {
 .wsus__details_class_time::after {
     position: absolute;
     content: "";
-    background: url(../images/details_class_time_shapes.png) center center / cover no-repeat;
+    background: url("{{ asset('images/details_class_time_shapes.png') }}") center center / cover no-repeat;
     width: 120px;
     height: 310px;
     top: 100px;
@@ -5500,7 +5493,7 @@ header {
 }
 
 .wsus__program_details .wsus__join_event_right {
-    background: url(../images/cta_bg_2.png) center center / cover no-repeat;
+    background: url("{{ asset('images/cta_bg_2.png') }}") center center / cover no-repeat;
 }
 
 .wsus__program_details_sidebar_form {
@@ -6131,7 +6124,7 @@ header {
     height: 70px;
     bottom: 40px;
     left: 30px;
-    background: url(../images/queto_1.png) center center / cover no-repeat;
+    background: url("{{ asset('images/queto_1.png') }}") center center / cover no-repeat;
 }
 
 .wsus__blog_details_queto::before {
@@ -6141,7 +6134,7 @@ header {
     height: 70px;
     top: 30px;
     right: 40px;
-    background: url(../images/queto_2.png) center center / cover no-repeat;
+    background: url("{{ asset('images/queto_2.png') }}") center center / cover no-repeat;
 }
 
 .wsus__blog_details_video {
@@ -7071,14 +7064,14 @@ header {
 }
 
 .wsus__faq_accordion .accordion-button:not(.collapsed)::after {
-    background-image: url(../images/mainus.png);
+    background-image: url("{{ asset('images/mainus.png') }}");
 }
 
 .wsus__faq_accordion .accordion-button::after {
     position: absolute;
     width: 32px;
     height: 32px;
-    background-image: url(../images/plus.png);
+    background-image: url("{{ asset('images/plus.png') }}");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
