@@ -1432,7 +1432,6 @@ header {
 .wsus__machine_bg::after {
     position: absolute;
     content: "";
-    background: url("{{ asset('../images/machine_shapes_2.png') }}") center center / cover no-repeat;
     width: 170px;
     height: 185px;
     top: -30px;
@@ -1770,7 +1769,6 @@ header {
 .wsus__timetable::after {
     position: absolute;
     content: "";
-    background: url("{{ asset('../images/time_table_shapes.png') }}") center center / cover no-repeat;
     width: 115px;
     height: 200px;
     bottom: 20%;
@@ -2042,7 +2040,6 @@ header {
 .wsus__pricing::after {
     position: absolute;
     content: "";
-    background: url("{{ asset('../images/pricing_shape.png') }}") center center / cover no-repeat;
     width: 120px;
     height: 205px;
     bottom: 25%;
@@ -2122,7 +2119,6 @@ header {
 .wsus__pricing_page::before {
     position: absolute;
     content: "";
-    background: url("{{ asset('../images/pricing_shape_2.png') }}") center center / cover no-repeat;
     width: 120px;
     height: 300px;
     top: 200px;
@@ -2138,7 +2134,6 @@ header {
     position: relative;
     padding-left: 150px;
     padding-right: 150px;
-    background: url("{{ asset('../images/testimonial_bg.png') }}") center center / cover no-repeat;
 }
 
 .wsus__testimonial_area::after {
@@ -2863,7 +2858,6 @@ header {
 }
 
 .wsus__pricing_2 {
-    background: url("{{ asset('images/Pricing_2_bg.jpg') }}") center center / cover no-repeat;
 }
 
 .wsus__pricing_2_overly {
@@ -3839,7 +3833,6 @@ header {
 }
 
 .wsus__join_event_bottom {
-    background: url("{{ asset('images/join_event_form_bg.jpg') }}") center center / cover no-repeat;
 }
 
 .wsus__join_event_form {
@@ -3877,7 +3870,6 @@ header {
 
 .wsus__join_event_right {
     padding: 90px 50px;
-    background: url("{{ asset('images/cta_bg.jpg') }}") center center / cover no-repeat;
 }
 
 .wsus__join_event_right .wsus__section_heading_3 {
@@ -4240,17 +4232,7 @@ header {
     color: var(--colorWhite);
 }
 
-.home_4_dark .wsus__program_area::after {
-    background: url("{{ asset('images/program_shapes_dark.png') }}");
-}
 
-.home_4_dark .wsus__machine_bg::before {
-    background: url("{{ asset('images/machine_shapes_1_dark.png') }}");
-}
-
-.home_4_dark .wsus__machine_bg::after {
-    background: url("{{ asset('images/machine_shapes_2_dark.png') }}");
-}
 
 .home_4_dark .wsus__machine_bg {
     background: var(--DarkVersion);
@@ -4304,9 +4286,7 @@ header {
     border-right: 0;
 }
 
-.home_4_dark .wsus__timetable::after {
-    background: url("{{ asset('images/time_table_shapes_dark.png') }}");
-}
+
 
 .home_4_dark .wsus__video .wsus__section_headeing h2 {
     color: var(--colorWhite);
@@ -4370,17 +4350,13 @@ header {
     color: var(--colorBlack);
 }
 
-.home_4_dark .wsus__pricing::after {
-    background: url("{{ asset('images/pricing_shape_dark.png') }}");
-}
+
 
 .home_4_dark .wsus__single_pricing:hover {
     border-color: var(--colorWhite);
 }
 
-.home_4_dark .wsus__testimonial::after {
-    background: url("{{ asset('images/testimonial_shape_dark.png') }}");
-}
+
 
 .home_4_dark .wsus__blog_text .title {
     color: var(--colorWhite);
@@ -4456,7 +4432,6 @@ header {
 .wsus__why_choose_us::after {
     position: absolute;
     content: "";
-    background: url("{{ asset('images/why_choose_shapes.png') }}");
     width: 120px;
     height: 210px;
     top: -120px;
@@ -4571,7 +4546,6 @@ header {
 .wsus__counter::after {
     position: absolute;
     content: "";
-    background: url("{{ asset('images/counter_shapes.png') }}");
     width: 115px;
     height: 200px;
     top: 0;

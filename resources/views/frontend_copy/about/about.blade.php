@@ -59,67 +59,6 @@
         </div>
     </div>
 
-    {{-- <div class="py-5 px-4 lg:px-20">
-    <h1 class="text-[#01669B] text-22 lg:text-28 xl:text-32 font-poppins font-[700] leading-7 text-center pb-4">Our Team</h1>
-    <div id="ourTeam" class="swiper mySwiper !mt-5 !pb-10 !px-5">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="relative">
-                    <img class="-z-0 h-[260px] w-full"  src="{{ asset('frontend/assets/images/team/1.png') }}" alt="">
-                    <div class="bg-[#01669B] py-2 !z-30 absolute bottom-[0%] w-full">
-                        <h1 class="text-white text-18 font-poppins font-[500] leading-5 text-center">Prashoman Chakrabarti</h1>
-                        <p class="text-white font-poppins text-12 leading-4 text-center mt-1">Software Engineer</p>
-                    </div>
-                </div>
-                
-              </div>
-              <div class="swiper-slide">
-                <div class="relative">
-                    <img class="-z-0 h-[260px] w-full"  src="{{ asset('frontend/assets/images/team/2.png') }}" alt="">
-                    <div class="bg-[#01669B] py-2 !z-30 absolute bottom-[0%] w-full">
-                        <h1 class="text-white text-18 font-poppins font-[500] leading-5 text-center">Imdadul Haque</h1>
-                        <p class="text-white font-poppins text-12 leading-4 text-center mt-1">Team Lead</p>
-                    </div>
-                </div>
-                
-              </div>
-              <div class="swiper-slide">
-                <div class="relative">
-                    <img class="-z-0 h-[260px] w-full"  src="{{ asset('frontend/assets/images/team/3.png') }}" alt="">
-                    <div class="bg-[#01669B] py-2 !z-30 absolute bottom-[0%] w-full">
-                        <h1 class="text-white text-18 font-poppins font-[500] leading-5 text-center"> Prachi</h1>
-                        <p class="text-white font-poppins text-12 leading-4 text-center mt-1">Technical Team</p>
-                    </div>
-                </div>
-                
-              </div>
-              <div class="swiper-slide">
-                <div class="relative">
-                    <img class="-z-0 h-[260px] w-full"  src="{{ asset('frontend/assets/images/team/4.png') }}" alt="">
-                    <div class="bg-[#01669B] py-2 !z-30 absolute bottom-[0%] w-full">
-                        <h1 class="text-white text-18 font-poppins font-[500] leading-5 text-center">Abdullah</h1>
-                        <p class="text-white font-poppins text-12 leading-4 text-center mt-1">Software Engineer</p>
-                    </div>
-                </div>
-                
-              </div>
-              <div class="swiper-slide">
-                <div class="relative">
-                    <img class="-z-0 h-[260px] w-full"  src="{{ asset('frontend/assets/images/team/3.png') }}" alt="">
-                    <div class="bg-[#01669B] py-2 !z-30 absolute bottom-[0%] w-full">
-                        <h1 class="text-white text-18 font-poppins font-[500] leading-5 text-center"> Prachi</h1>
-                        <p class="text-white font-poppins text-12 leading-4 text-center mt-1">Technical Team</p>
-                    </div>
-                </div>
-                
-              </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        
-    </div>
-</div> --}}
-
     <div class="px-4 py-5 lg:px-28">
         <div style="box-shadow: 0 1px 10px rgb(0 0 0 / 0.2);"
             class=" py-8 lg:py-8 w-full h-full lg:flex items-center justify-between px-4  lg:px-9">
