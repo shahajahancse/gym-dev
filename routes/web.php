@@ -35,37 +35,16 @@ include 'demo.php';
 |
  */
 
- Route::get('/clear-cache', function () {
-    $exitCode = Artisan::call('cache:clear');
-    return '<h1>Cache facade value cleared</h1>';
-});
-
-//Reoptimized class loader:
-Route::get('/optimize', function () {
-    $exitCode = Artisan::call('optimize:clear');
-    return '<h1>Reoptimized class loader</h1>';
-});
-
-//Route cache:
-Route::get('/route-cache', function () {
-    $exitCode = Artisan::call('route:cache');
-    return '<h1>Routes cached</h1>';
-});
-//Clear Route cache:
-Route::get('/route-clear', function () {
-    $exitCode = Artisan::call('route:clear');
-    return '<h1>Route cache cleared</h1>';
-});
-//Clear View cache:
-Route::get('/view-clear', function () {
-    $exitCode = Artisan::call('view:clear');
-    return '<h1>View cache cleared</h1>';
+Route::get('/clear', function () {
+    Artisan::call('optimize:clear');
+    return '<h1>All cache cleared</h1>';
 });
 
 Auth::routes();
 
 // fontend routes
 Route::get( '/welcome', [HomeController::class, 'index'] )->name( 'welcome' );
+Route::get( '/abou-us', [HomeController::class, 'about_us'] )->name( 'about_us' );
 Route::get( '/privacy', [HomeController::class, 'privacy'] )->name( 'privacy' );
 Route::get( '/terms_conditions', [HomeController::class, 'terms_conditions'] )->name( 'terms_conditions' );
 Route::get( '/solutions', [DeviceController::class, 'index'] )->name( 'solutions' );

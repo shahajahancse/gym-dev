@@ -87,7 +87,7 @@
                     <ul class="navbar-nav m-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Home</a>
+                            <a class="nav-link" href="{{ url('/welcome') }}">Home</a>
                         </li>
 
                         <li class="nav-item">

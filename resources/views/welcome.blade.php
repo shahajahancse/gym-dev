@@ -178,74 +178,7 @@ https://templatemo.com/tm-548-training-studio
                         @endphp</p>
                     </div>
                 </div>
-                {{-- <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="First One">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Fitness</h4>
-                                <p>Improve your overall health and well-being with our structured basic fitness routine, designed to fit any lifestyle.</p>
 
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="second one">
-                            </div>
-                            <div class="right-content">
-                                <h4>New Gym Training</h4>
-                                <p>This program is designed for those who want to try something new and different. It is a combination of basic exercises and weightlifting, which will help you to build strength and muscle mass.</p>
-
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="third gym training">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Muscle Course</h4>
-                                <p>This program is designed for those who want to gain muscle mass and improve their overall physical fitness. It is a combination of exercises that target different muscle groups and it is a great way to build strength and improve muscle tone. </p>
-
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="fourth muscle">
-                            </div>
-                            <div class="right-content">
-                                <h4>Advanced Muscle Course</h4>
-                                <p>This program is designed for those who want to gain more muscle mass and improve their overall physical fitness. It is a combination of exercises that target different muscle groups and it is a great way to build strength and improve muscle tone.</p>
-
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="training fifth">
-                            </div>
-                            <div class="right-content">
-                                <h4>Yoga Training</h4>
-                                <p>This program is designed for those who want to improve their flexibility, balance and overall physical fitness. It is a combination of exercises that target different muscle groups and it is a great way to improve your overall physical fitness.</p>
-
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="gym training">
-                            </div>
-                            <div class="right-content">
-                                <h4>Body Building Course</h4>
-                                <p>This program is designed for those who want to gain muscle mass and improve their overall physical fitness. It is a combination of exercises that target different muscle groups and it is a great way to build strength and improve muscle tone.</p>
-
-                            </div>
-                        </li>
-                    </ul>
-                </div> --}}
                 @foreach ($SiteFeature as $feature)
                     <div class="col-lg-6">
                         <ul class="features-items">
@@ -266,71 +199,7 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </section>
-    {{--
-    <section class="section" id="schedule">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading dark-bg">
-                        <h2>Classes <em>Schedule</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="filters">
-                        <ul class="schedule-filter">
-                            <li class="active" data-tsfilter="monday">Monday</li>
-                            <li data-tsfilter="tuesday">Tuesday</li>
-                            <li data-tsfilter="wednesday">Wednesday</li>
-                            <li data-tsfilter="thursday">Thursday</li>
-                            <li data-tsfilter="friday">Friday</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="schedule-table filtering">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="day-time">Fitness Class</td>
-                                    <td class="monday ts-item show" data-tsmeta="monday">10:00AM - 11:30AM</td>
-                                    <td class="tuesday ts-item" data-tsmeta="tuesday">2:00PM - 3:30PM</td>
-                                    <td>William G. Stewart</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Muscle Training</td>
-                                    <td class="friday ts-item" data-tsmeta="friday">10:00AM - 11:30AM</td>
-                                    <td class="thursday friday ts-item" data-tsmeta="thursday" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                    <td>Paul D. Newman</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Body Building</td>
-                                    <td class="tuesday ts-item" data-tsmeta="tuesday">10:00AM - 11:30AM</td>
-                                    <td class="monday ts-item show" data-tsmeta="monday">2:00PM - 3:30PM</td>
-                                    <td>Boyd C. Harris</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Yoga Training Class</td>
-                                    <td class="wednesday ts-item" data-tsmeta="wednesday">10:00AM - 11:30AM</td>
-                                    <td class="friday ts-item" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                    <td>Hector T. Daigle</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Advanced Training</td>
-                                    <td class="thursday ts-item" data-tsmeta="thursday">10:00AM - 11:30AM</td>
-                                    <td class="wednesday ts-item" data-tsmeta="wednesday">2:00PM - 3:30PM</td>
-                                    <td>Bret D. Bowers</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
+
 
     <!-- ***** Testimonials Starts ***** -->
     <section class="section" id="trainers">

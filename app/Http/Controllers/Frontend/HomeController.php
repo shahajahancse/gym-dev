@@ -23,10 +23,17 @@ class HomeController extends Controller
         return view( 'frontend.index');
     }
 
+    public function about_us()
+    {
+        return view( 'frontend.' );
+    }
+
     public function privacy()
     {
         return view( 'frontend.privacy.privacy' );
     }
+
+
     public function terms_conditions()
     {
         return view( 'frontend.terms_conditions.terms_conditions' );

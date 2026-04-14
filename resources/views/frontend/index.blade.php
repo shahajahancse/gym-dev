@@ -1,6 +1,6 @@
 @extends('font_layout.layouts')
 @section('title')
-    Gym Master | About Us
+    Gym | Fitness
 @endsection
 
     @section('content')
