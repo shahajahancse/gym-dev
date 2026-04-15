@@ -37,10 +37,6 @@ class MemberController extends AppBaseController
         if ( !if_can( 'member_manage' ) ) {
             return redirect()->back();
         }
-        // echo '<pre>';
-        // print_r($memberDataTable);
-        // echo '</pre>';
-        // exit;
 
         // dd($memberDataTable);
         return $memberDataTable->render( 'members.index' );

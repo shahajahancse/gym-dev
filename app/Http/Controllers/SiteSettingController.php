@@ -127,18 +127,17 @@ class SiteSettingController extends AppBaseController
 
         if (empty($siteSetting)) {
             Flash::error('Site Settings not found');
-
             return redirect(route('siteSettings.index'));
         }
         $input = $request->all();
 
         if ($request->hasFile('logo')) {
-            $path = storage_path('app/public/images/site');
+            $path = storage_path('app/public/uploads/website-images');
             if (!File::exists($path)) {
                 File::makeDirectory($path, 0775, true, true);
             }
             $file = $request->file('logo');
-            $input['logo'] = $file->store('images/site', 'public');
+            $input['logo'] = $file->store('uploads/website-images', 'public');
         }else{
             unset($input['logo']);
         }
@@ -175,7 +174,7 @@ class SiteSettingController extends AppBaseController
             return redirect(route('siteSettings.index'));
         }
 
-        
+
 
 
 

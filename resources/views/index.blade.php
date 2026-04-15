@@ -52,12 +52,6 @@
                         <i class="im im-icon-Business-Mens im-icon-set float-right bg-primary"></i>
                         <h3>{{ $total ? $total : 0 }}</h3>
                         <p>Total Members</p>
-                        <!-- <div class="progress meter mr-15">
-                        <div id="progress-primary"
-                            class=" progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div> -->
-                        <!-- {{-- <p class="mb-0 mt-3 "><span>Gained: 655</span> <span class="float-right pr-15">Lost: 56</span></p> --}} -->
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3 col-12  mb-20">

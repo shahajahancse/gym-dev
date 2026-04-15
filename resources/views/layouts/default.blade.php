@@ -4,10 +4,6 @@
 <head>
     <title>
         @php
-        if (!Auth::check()) {
-        // dd("Please login first");
-        // redirect(route('welcome'));
-        }
         $setting = DB::table('sitesettings')->first();
         @endphp
         @section('title')| {{ !empty($setting) ? $setting->name : 'Gym Master' }} -
@@ -38,9 +34,6 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js">
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
-
-    {{-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
 
@@ -71,19 +64,13 @@
 <body>
     {{-- top bar --}}
     <!-- header logo: style can be found in header-->
-    <header class="header">
+    <header class="header" style="height: 40px">
         <nav class="navbar navbar-expand-lg navbar-light navbar-static-top" role="navigation">
             <a href="javascript:void(0)" class="ml-100 toggle-right d-xl-none d-lg-block">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 <img src="{{ asset('img/images/toggle.png') }}" alt="logo" />
             </a>
-            <!-- Header Navbar: style can be found in header-->
-            <!-- Sidebar toggle button-->
-            <!-- Sidebar toggle button-->
-            <h3
-                style="display: flex;width: -webkit-fill-available;place-content: center;font-size: x-large;width: -moz-available;">
-                {{ !empty($setting) ? $setting->name : 'Gym Master' }} -
-                {{ !empty($setting) ? $setting->slogan : 'Gym Master' }} </h3>
+
 
             @php
 

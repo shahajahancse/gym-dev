@@ -1,10 +1,12 @@
 <div id="menu" role="navigation">
-    <div style="text-align: -webkit-center;border-bottom: 2px solid #686868;margin-bottom: 13px;">
+    <div style="text-align: -webkit-center; border-bottom: 2px solid #686868;margin-bottom: 0px; margin-top: 20px;">
         <a href="{{ URL::to('index') }}" class="logo navbar-brand mr-0">
             @php
                 $setting = DB::table('sitesettings')->first();
             @endphp
-            <h1 class="text-center" style="display: inline;"><img style="height: 60px;"  src="{{Storage::url((!empty($setting))?$setting->logo:'')}}" alt=""></h1>
+                <img style="height: 35px; width: 200px;"  src="{{ asset('uploads/website-images/logo_ac.png') }}" alt="Fitness" class="img-fluid">
+            {{-- <h1 class="text-center" style="display: inline; top: 15px">
+            </h1> --}}
         </a>
     </div>
     <ul class="navigation list-unstyled" id="demo">
