@@ -10,7 +10,6 @@
 @endphp
 <div class="row">
     @include('componant.member_select')
-    {{-- <input type="hidden" id="member_id" name="member_id" value="{{ isset($member_id) ? $member_id : '' }}"> --}}
     <div class="form-group col-md-4">
         {!! Form::label('package_id', 'Package Id:', ['class' => 'control-label']) !!}
         {!! Form::select('package_id', $packages->pluck('pack_name', 'id')->prepend('Select Package', ''), null, [
@@ -29,14 +28,6 @@
         {!! Form::number('tax', null, ['class' => 'form-control']) !!}
     </div>
     <div class="form-group col-md-4">
-        {!! Form::label('admission_fee', 'Admission Fee:', ['class' => 'control-label']) !!}
-        {!! Form::number('admission_fee', null, ['class' => 'form-control','onkeyup' => 'calculate()']) !!}
-    </div>
-    <div class="form-group col-md-4">
-        {!! Form::label('gross_amount', 'Gross Amount:', ['class' => 'control-label']) !!}
-        {!! Form::number('gross_amount', 0, ['class' => 'form-control']) !!}
-    </div>
-    <div class="form-group col-md-4">
         {!! Form::label('coupons_id', 'Coupon Code:', ['class' => 'control-label']) !!}
         {!! Form::text('coupons_id', null, ['class' => 'form-control', 'id' => 'coupons_id']) !!}
         <span class="text-danger" id="coupons_id_error"></span>
@@ -45,7 +36,15 @@
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('coupon_amount', 'Coupon Amount:', ['class' => 'control-label']) !!}
-        {!! Form::number('coupon_amount', null, ['class' => 'form-control']) !!}
+        {!! Form::number('coupon_amount', null, ['class' => 'form-control', 'readonly', 'id' => 'coupon_amount']) !!}
+    </div>
+    <div class="form-group col-md-4">
+        {!! Form::label('admission_fee', 'Admission Fee:', ['class' => 'control-label']) !!}
+        {!! Form::number('admission_fee', null, ['class' => 'form-control','onkeyup' => 'calculate()']) !!}
+    </div>
+    <div class="form-group col-md-4">
+        {!! Form::label('gross_amount', 'Gross Amount:', ['class' => 'control-label']) !!}
+        {!! Form::number('gross_amount', 0, ['class' => 'form-control']) !!}
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('pay_amount', 'Pay Amount:', ['class' => 'control-label']) !!}
@@ -53,7 +52,7 @@
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('due_amount', 'Due Amount:', ['class' => 'control-label']) !!}
-        {!! Form::number('due_amount', null, ['class' => 'form-control']) !!}
+        {!! Form::number('due_amount', null, ['class' => 'form-control', 'readonly']) !!}
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('status', 'Status:', ['class' => 'control-label']) !!}
@@ -162,7 +161,6 @@
                         calculate()
                     }
                 });
-
             })
         })
     </script>
@@ -203,8 +201,6 @@
     </script>
     <script>
         function calculate() {
-            console.log('calculate');
-
             var amount = document.getElementById('amount').value;
             var coupon_amount = document.getElementById('coupon_amount').value;
             var admission_fee = document.getElementById('admission_fee').value;

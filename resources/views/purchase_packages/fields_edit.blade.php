@@ -28,7 +28,7 @@
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('coupon_amount', 'Coupon Amount:', ['class' => 'control-label']) !!}
-        {!! Form::number('coupon_amount', null, ['class' => 'form-control']) !!}
+        {!! Form::number('coupon_amount', null, ['class' => 'form-control', 'readonly']) !!}
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('admission_fee', 'Admission Fee:', ['class' => 'control-label']) !!}
@@ -44,7 +44,7 @@
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('due_amount', 'Due Amount:', ['class' => 'control-label']) !!}
-        {!! Form::number('due_amount', null, ['class' => 'form-control']) !!}
+        {!! Form::number('due_amount', null, ['class' => 'form-control', 'readonly']) !!}
     </div>
     <div class="form-group col-md-4">
         {!! Form::label('active_status', 'Active Status:', ['class' => 'control-label']) !!}
@@ -58,10 +58,6 @@
         {!! Form::date('inactive_date', null, ['class' => 'form-control']) !!}
     </div>
 
-    <div class="form-group col-md-4">
-        {!! Form::label('due_amount', 'Due Amount:', ['class' => 'control-label']) !!}
-        {!! Form::number('due_amount', null, ['class' => 'form-control']) !!}
-    </div>
     <div class="form-group col-md-4">
         {!! Form::label('status', 'Status:', ['class' => 'control-label']) !!}
         {!! Form::select('status', ['' => 'Select Status', '1' => 'Pending', '2' => 'Due', '3' => 'Full Paid'], null, [
