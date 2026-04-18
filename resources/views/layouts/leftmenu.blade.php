@@ -1,5 +1,5 @@
 <div id="menu" role="navigation">
-    <div style="text-align: -webkit-center; border-bottom: 2px solid #686868;margin-bottom: 0px; margin-top: 20px;">
+    <div style="text-align: -webkit-center; border-bottom: 2px solid #686868;margin-bottom: 0px; margin-top: 30px;">
         <a href="{{ URL::to('index') }}" class="logo navbar-brand mr-0">
             @php
                 $setting = DB::table('sitesettings')->first();

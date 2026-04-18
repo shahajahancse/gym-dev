@@ -17,12 +17,12 @@
 
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" />
+    {{-- <link rel="shortcut icon" href="{{ asset('img/favicon.icon') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('fonts/iconmind.css') }}">
 
     <!-- global css -->
     <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('vendors/perfect-scrollbar/css/perfect-scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/perfect-scrollbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
     {{-- //<script src="https://cdn.tailwindcss.com"></script> --}}
 
@@ -39,21 +39,21 @@
 
 
     <style>
-    #demo {
-        position: relative;
+        #demo {
+            position: relative;
 
-        overflow: auto;
-    }
+            overflow: auto;
+        }
     </style>
     <style>
-    .dataTables_wrapper {
-        overflow-x: scroll;
-    }
+        .dataTables_wrapper {
+            overflow-x: scroll;
+        }
 
-    .chosen-single {
-        padding: 6px !important;
-        height: fit-content !important;
-    }
+        .chosen-single {
+            padding: 6px !important;
+            height: fit-content !important;
+        }
     </style>
     <!-- end of global css -->
 
@@ -295,54 +295,49 @@
     <!-- end of page level js -->
     <!-- Start of vendor js -->
     @yield('footer_scripts')
+    @yield('scripts')
 
-    <script src="{{ asset('vendors/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('js/perfect-scrollbar.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
 
 
 
 
     <script>
-    document.body.style.zoom = "90%";
+        document.body.style.zoom = "90%";
     </script>
 
-    {{-- <script>
-        $(document).ready(function() {
-            $('input').attr('required', 'required');
-        });
-    </script> --}}
-
     <style>
-    .top_solver {
-        top: -161px !important;
-    }
+        .top_solver {
+            top: -161px !important;
+        }
     </style>
 
     <script>
-    $(document).ready(function() {
-        var ww = $(window).width();
-        console.log(ww);
-        $(window).resize(function() {
-            checkWidth();
+        $(document).ready(function() {
+            var ww = $(window).width();
+            console.log(ww);
+            $(window).resize(function() {
+                checkWidth();
+            });
         });
-    });
 
-    function checkWidth() {
-        var ww = $(window).width();
-        console.log(ww);
+        function checkWidth() {
+            var ww = $(window).width();
+            console.log(ww);
 
-        if (ww < 767) {
-            $('.sidebar-res').css('margin-left', '');
+            if (ww < 767) {
+                $('.sidebar-res').css('margin-left', '');
+            }
+
+            if (ww < 992) {
+                console.log('rhb');
+                $('.left-aside').addClass('top_solver');
+            } else {
+                $('.left-aside').removeClass('top_solver');
+            }
+
         }
-
-        if (ww < 992) {
-            console.log('rhb');
-            $('.left-aside').addClass('top_solver');
-        } else {
-            $('.left-aside').removeClass('top_solver');
-        }
-
-    }
     </script>
 
 

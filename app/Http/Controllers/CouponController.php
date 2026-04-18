@@ -21,9 +21,19 @@ class CouponController extends AppBaseController
      * @param CouponDataTable $couponDataTable
      * @return Response
      */
-    public function index(CouponDataTable $couponDataTable)
+    // public function index(CouponDataTable $couponDataTable)
+    // {
+    //     return $couponDataTable->render('coupons.index');
+    // }
+
+
+    public function index( Request $request )
     {
-        return $couponDataTable->render('coupons.index');
+        /** @var Coupon coupon */
+        $query = Coupon::select('coupons.*');
+        $coupons = $query->orderBy( 'coupons.expire_date', 'desc' )->get();
+        // dd($purchasePackages);
+        return view( 'coupons.index' )->with( 'coupons', $coupons );
     }
 
     /**

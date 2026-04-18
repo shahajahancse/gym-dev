@@ -21,10 +21,20 @@ class PackageController extends AppBaseController
      * @param PackageDataTable $packageDataTable
      * @return Response
      */
-    public function index( PackageDataTable $packageDataTable )
+    // public function index( PackageDataTable $packageDataTable )
+    // {
+    //     return $packageDataTable->render( 'packages.index' );
+    // }
+
+    public function index( Request $request )
     {
-        return $packageDataTable->render( 'packages.index' );
+        /** @var Package package */
+        $query = Package::select('packages.*');
+        $packages = $query->orderBy( 'packages.id', 'desc' )->get();
+        // dd($purchasePackages);
+        return view( 'packages.index' )->with( 'packages', $packages );
     }
+
 
     /**
      * Show the form for creating a new Package.

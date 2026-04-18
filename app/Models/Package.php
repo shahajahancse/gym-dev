@@ -22,8 +22,10 @@ class Package extends Model
     public $fillable = [
         'pack_name',
         'branch_id',
-        'pack_image',
+        'regular_fee',
+        'discount',
         'pack_admission_fee',
+        'pack_image',
         'pack_duration',
         'pack_status',
     ];
@@ -36,6 +38,8 @@ class Package extends Model
     protected $casts = [
         'id'                 => 'integer',
         'pack_name'          => 'string',
+        'regular_fee'        => 'decimal:2',
+        'discount'           => 'decimal:2',
         'pack_admission_fee' => 'integer',
         'pack_duration'      => 'string',
         'pack_status'        => 'integer',
@@ -48,9 +52,10 @@ class Package extends Model
      */
     public static $rules = [
         'pack_name'          => 'required',
+        'regular_fee'        => 'required',
+        'discount'           => 'required',
         'pack_admission_fee' => 'required',
         'pack_duration'      => 'required',
         'pack_image'         => 'required',
     ];
-
 }
