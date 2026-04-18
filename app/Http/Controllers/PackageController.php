@@ -101,13 +101,10 @@ class PackageController extends AppBaseController
     {
         /** @var Package $package */
         $package = Package::find( $id );
-
         if ( empty( $package ) ) {
             Flash::error( 'Package not found' );
-
             return redirect( route( 'packages.index' ) );
         }
-
         return view( 'packages.show' )->with( 'package', $package );
     }
 

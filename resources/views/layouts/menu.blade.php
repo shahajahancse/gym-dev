@@ -50,39 +50,6 @@
     </li>
 @endif
 
-{{-- Exercise Option --}}
-@if (if_can('exercise-access') || if_can('schedule_booking'))
-    <li {!! Request::is('workoutCategories*') || Request::is('dailyWorkouts*') || Request::is('schedulebookings*')
-        ? 'class="menu-dropdown mm-active active"'
-        : "class='menu-dropdown'" !!}>
-        <a href="#">
-            <span class="mm-text "> Exercise </span>
-            <span class="menu-icon"><i class="align-self-center fa-1x fas fa-calendar-alt"></i></span><span class="im im-icon-Arrow-Right imicon"></span>
-        </a>
-        <ul class="sub-menu list-unstyled">
-            @if (if_can('site_settings'))
-                <li class="{!! Request::is('workoutCategories*') ? 'active' : '' !!}">
-                    <a href="{{ route('workoutCategories.index') }}">
-                        <span class="mm-text ">Workout Categories</span>
-                    </a>
-                </li>
-            @endif
-            <li class="{!! Request::is('dailyWorkouts*') ? 'active' : '' !!}">
-                <a href="{{ route('dailyWorkouts.index') }}">
-                    <span class="mm-text ">Daily Workouts</span>
-                </a>
-            </li>
-            @if (if_can('schedule_booking'))
-                <li class="{!! Request::is('schedulebookings*') ? 'active' : '' !!}">
-                    <a href="{{ route('schedulebookings.index') }}">
-                        <span class="mm-text ">Schedule Bookings</span>
-                    </a>
-                </li>
-            @endif
-        </ul>
-    </li>
-@endif
-
 {{-- Package & Offer Option --}}
 <li {!! Request::is('packages*') || Request::is('purchasePackages*') || Request::is('package_report') || Request::is('offers*') || Request::is('coupons*')
     ? 'class="menu-dropdown mm-active active"'
@@ -159,6 +126,39 @@
                     <span class="mm-text ">Locker Assignments</span>
                 </a>
             </li>
+        </ul>
+    </li>
+@endif
+
+{{-- Exercise Option --}}
+@if (if_can('exercise-access') || if_can('schedule_booking'))
+    <li {!! Request::is('workoutCategories*') || Request::is('dailyWorkouts*') || Request::is('schedulebookings*')
+        ? 'class="menu-dropdown mm-active active"'
+        : "class='menu-dropdown'" !!}>
+        <a href="#">
+            <span class="mm-text "> Exercise </span>
+            <span class="menu-icon"><i class="align-self-center fa-1x fas fa-calendar-alt"></i></span><span class="im im-icon-Arrow-Right imicon"></span>
+        </a>
+        <ul class="sub-menu list-unstyled">
+            @if (if_can('site_settings'))
+                <li class="{!! Request::is('workoutCategories*') ? 'active' : '' !!}">
+                    <a href="{{ route('workoutCategories.index') }}">
+                        <span class="mm-text ">Workout Categories</span>
+                    </a>
+                </li>
+            @endif
+            <li class="{!! Request::is('dailyWorkouts*') ? 'active' : '' !!}">
+                <a href="{{ route('dailyWorkouts.index') }}">
+                    <span class="mm-text ">Daily Workouts</span>
+                </a>
+            </li>
+            @if (if_can('schedule_booking'))
+                <li class="{!! Request::is('schedulebookings*') ? 'active' : '' !!}">
+                    <a href="{{ route('schedulebookings.index') }}">
+                        <span class="mm-text ">Schedule Bookings</span>
+                    </a>
+                </li>
+            @endif
         </ul>
     </li>
 @endif

@@ -31,15 +31,25 @@ class MemberController extends AppBaseController
      * @param MemberDataTable $memberDataTable
      * @return Response
      */
-    public function index( MemberDataTable $memberDataTable )
-    {
+    // public function index( MemberDataTable $memberDataTable )
+    // {
+    //     if ( !if_can( 'member_manage' ) ) {
+    //         return redirect()->back();
+    //     }
+    //     // dd($memberDataTable);
+    //     return $memberDataTable->render( 'members.index' );
+    // }
 
+    public function index( Request $request )
+    {
         if ( !if_can( 'member_manage' ) ) {
             return redirect()->back();
         }
-
-        // dd($memberDataTable);
-        return $memberDataTable->render( 'members.index' );
+        /** @var Member members */
+        $query = Member::select('members.*');
+        $members = $query->orderBy( 'members.id', 'desc' )->get();
+        // dd($members);
+        return view( 'members.index' )->with( 'members', $members );
     }
 
     /**
