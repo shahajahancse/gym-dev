@@ -34,9 +34,8 @@
             <br>
             <div class="row">
                 @php
-                    $active = DB::table('attendences')
-                        ->where('date', date('Y-m-d'))
-                        ->where('status', 'Present')
+                    $active = DB::table('purchasepackages')
+                        ->where('expired_date', '>', date('Y-m-d'))
                         ->count();
                     $total = DB::table('members')->count();
                     $gender = DB::table('members')
@@ -47,46 +46,27 @@
                         ->first();
                 @endphp
 
-                <div class="col-md-6 col-xl-3 col-12 mb-20">
+                <div class="col-md-6 col-xl-4 col-12 mb-20">
                     <div class="  bg-white dashboard-col pl-15 pb-15 pt-15">
                         <i class="im im-icon-Business-Mens im-icon-set float-right bg-primary"></i>
                         <h3>{{ $total ? $total : 0 }}</h3>
                         <p>Total Members</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3 col-12  mb-20">
+                <div class="col-md-6 col-xl-4 col-12  mb-20">
                     <div class="bg-white dashboard-col pl-15 pb-15 pt-15">
                         <i class="im im-icon-Checked-User im-icon-set float-right bg-success"></i>
                         <h3>{{ $active ? $active : 0 }}</h3>
                         <p class="text">Active Members</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3 col-12  mb-20">
+                <div class="col-md-6 col-xl-4 col-12  mb-20">
                     <div class="bg-white dashboard-col pl-15 pb-15 pt-15">
                         <i class="im im-icon-Lock-User im-icon-set float-right bg-primary"></i>
                         <h3>{{ $total - $active }}</h3>
                         <p class="text">Inactive Members</p>
                     </div>
                 </div>
-                @if(if_can('male-access') || if_can('admin-access'))
-                <div class="col-md-6 col-xl-3 col-12  mb-20">
-                    <div class="bg-white dashboard-col pl-15 pb-15 pt-15">
-                        <i class="im im-icon-Male im-icon-set float-right bg-success"></i>
-                        <h3>{{ $gender->male }}</h3>
-                        <p class="text">Male Members</p>
-                    </div>
-                </div>
-                @endif
-                @if(if_can('female-access') || if_can('admin-access'))
-
-                <div class="col-md-6 col-xl-3 col-12  mb-20">
-                    <div class="bg-white dashboard-col pl-15 pb-15 pt-15">
-                        <i class="im im-icon-Female im-icon-set float-right bg-success"></i>
-                        <h3>{{ $gender->female }}</h3>
-                        <p class="text">Female Members</p>
-                    </div>
-                </div>
-                @endif
             </div>
         </section>
         <section class="content">
