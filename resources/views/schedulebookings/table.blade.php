@@ -14,34 +14,34 @@
     <table class="table" id="schedulebookings-table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Sl</th>
                 <th>Member Name</th>
                 <th>Booking Date</th>
                 <th>Booking Time</th>
                 <th>Service Type</th>
                 <th>Status</th>
                 <th>Note</th>
-                <th>Created At</th>
+                {{-- <th>Created At</th> --}}
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-        @foreach($schedulebookings as $schedulebooking)
+        @foreach($schedulebookings as $key => $schedulebooking)
             <tr>
-                <td>{{ $schedulebooking->id }}</td>
-            <td>{{ $schedulebooking->mem_name}}</td>
-            <td>{{ date('Y-m-d', strtotime($schedulebooking->booking_date)) }}</td>
-            <td>{{ $schedulebooking->booking_time }}</td>
-            <td>{{ $schedulebooking->service_type }}</td>
-            <td>
-                @if($schedulebooking->status == 2)
-                    <button class="btn btn-primary">Active</button>
-                @else
-                    <span class="btn btn-danger">Inactive</span>
-                @endif
-            </td>
-            <td>{{ $schedulebooking->note }}</td>
-            <td>{{ $schedulebooking->created_at }}</td>
+                <td>{{ $schedulebookings->firstItem() + $key }}</td>
+                <td>{{ $schedulebooking->mem_name}}</td>
+                <td>{{ date('Y-m-d', strtotime($schedulebooking->booking_date)) }}</td>
+                <td>{{ $schedulebooking->booking_time }}</td>
+                <td>{{ $schedulebooking->service_type }}</td>
+                <td>
+                    @if($schedulebooking->status == 2)
+                        <button class="btn btn-primary">Active</button>
+                    @else
+                        <span class="btn btn-danger">Inactive</span>
+                    @endif
+                </td>
+                <td>{{ $schedulebooking->note }}</td>
+                {{-- <td>{{ $schedulebooking->created_at }}</td> --}}
                 <td>
                     {!! Form::open(['route' => ['schedulebookings.destroy', $schedulebooking->schedulebooking_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

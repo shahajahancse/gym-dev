@@ -22,7 +22,7 @@ class LockerAssignmentController extends AppBaseController
     public function index( Request $request )
     {
         /** @var LockerAssignment $lockerAssignments */
-        $query = LockerAssignment::select( 'lockerassignments.*', 'members.mem_name as member_name', 'lockers.locker_number', 'lockerassignments.id as assignment_id' )
+        $query = LockerAssignment::select( 'lockerassignments.*', 'members.member_unique_id', 'members.mem_name', 'members.last_name', 'lockers.locker_number', 'lockerassignments.id as assignment_id' )
             ->join( 'members', 'lockerassignments.member_id', '=', 'members.id' )
             ->join( 'lockers', 'lockerassignments.locker_id', '=', 'lockers.id' );
 
@@ -30,7 +30,7 @@ class LockerAssignmentController extends AppBaseController
         if ( if_can( 'male-access' ) ) {
             $query->where( 'members.branch_id', 1 ); // Male branch
         } elseif ( if_can( 'female-access' ) ) {
-            $query->where( 'members.branch_id', 2 ); // Female branch 
+            $query->where( 'members.branch_id', 2 ); // Female branch
         } elseif ( !if_can( 'see_all_branch' ) ) {
             $query->where( 'members.branch_id', get_branch() );
         }
@@ -69,26 +69,26 @@ class LockerAssignmentController extends AppBaseController
 
             'member_id'      => $input['member_id'],
             'locker_id'      => $input['locker_id'],
-            'amount'         => $input['amount'],
-            'tax'            => $input['tax'],
-            'admission_fee'  => $input['admission_fee'],
-            'gross_amount'   => $input['gross_amount'],
-            'coupons_id'     => $input['coupons_id'],
-            'coupon_amount'  => $input['coupon_amount'],
-            'pay_amount'     => $input['pay_amount'],
-            'due_amount'     => $input['due_amount'],
-            'pay_status'     => $input['pay_status'],
+            'amount'         => $input['amount'] ?? 0,
+            'tax'            => $input['tax'] ?? 0,
+            'admission_fee'  => $input['admission_fee'] ?? 0,
+            'gross_amount'   => $input['gross_amount'] ?? 0,
+            'coupons_id'     => $input['coupons_id'] ?? null,
+            'coupon_amount'  => $input['coupon_amount'] ?? 0,
+            'pay_amount'     => $input['pay_amount'] ?? 0,
+            'due_amount'     => $input['due_amount'] ?? 0,
+            'pay_status'     => $input['pay_status'] ?? null,
             'start_date'     => $input['start_date'],
             'end_date'       => $input['end_date'],
             'active_status'  => 'Active',
             'status'         => $input['locker_status'],
-            'payment_mode'   => $input['payment_mode'],
-            'payment_date'   => $input['payment_date'],
-            'payment_amount' => $input['payment_amount'],
-            'payment_note'   => $input['payment_note'],
-            'payment_doc'    => $input['payment_doc'],
-            'payment_number' => $input['payment_number'],
-            'payment_status' => $input['payment_status'],
+            'payment_mode'   => $input['payment_mode'] ?? null,
+            'payment_date'   => $input['payment_date'] ?? null,
+            'payment_amount' => $input['payment_amount'] ?? 0,
+            'payment_note'   => $input['payment_note'] ?? null,
+            'payment_doc'    => $input['payment_doc'] ?? null,
+            'payment_number' => $input['payment_number'] ?? null,
+            'payment_status' => $input['payment_status'] ?? null,
 
         ] );
 

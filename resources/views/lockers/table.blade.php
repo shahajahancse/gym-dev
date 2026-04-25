@@ -2,18 +2,18 @@
     <table class="table" id="lockers-table">
         <thead>
             <tr>
-                <th>Id</th>
-        <th>Locker Number</th>
-        <th>Location</th>
-        <th>Status</th>
-        <th>Created At</th>
+                <th>Sl</th>
+                <th>Locker Number</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Created At</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($lockers as $key => $locker)
             <tr>
-                <td>{{ $locker->id }}</td>
+                <td>{{ $key + 1 }}</td>
             <td>{{ $locker->locker_number }}</td>
             <td>{{ $locker->location }}</td>
             <td>{{ $locker->status }}</td>

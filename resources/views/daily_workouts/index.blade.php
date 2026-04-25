@@ -52,14 +52,14 @@
                                     ->join('members', 'members.id', '=', 'daily_work_out_details.member_id')
                                     ->select(
                                         'members.mem_name',
-                                        'daily_work_out_details.*', 
+                                        'daily_work_out_details.*',
                                         'daily_work_out_details.id as daily_work_out_id'
                                     );
 
                                 if (if_can('male-access')) {
                                     $query->where('members.branch_id', 1);
                                 } elseif (if_can('female-access')) {
-                                    $query->where('members.branch_id', 2); 
+                                    $query->where('members.branch_id', 2);
                                 } elseif (!if_can('see_all_branch')) {
                                     $query->where('members.branch_id', get_branch());
                                 }
@@ -89,7 +89,7 @@
                                                     <i class="im im-icon-Printer" data-placement="top" title="Print"></i>
                                                 </a>
                                                 @if (if_can('show_all_data'))
-                                                    <a href="{{ route('dailyWorkouts.update_info', [$row->daily_work_out_id]) }}"
+                                                    <a href="{{ route('dailyWorkouts.edit', [$row->daily_work_out_id]) }}"
                                                         class="btn btn-outline-primary btn-xs">
                                                         <i class="im im-icon-Pen" data-toggle="tooltip" data-placement="top"
                                                             title="Edit"></i>

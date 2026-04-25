@@ -19,7 +19,7 @@ class LockerAssignment extends Model
 {
 
     public $table = 'lockerassignments';
-    
+
 
 
     protected $guarded = ['id'];
@@ -44,8 +44,28 @@ class LockerAssignment extends Model
      * @var array
      */
     public static $rules = [
-        
+        'member_id'      => 'required|integer|exists:members,id',
+        'locker_id'      => 'required|integer|exists:lockers,id',
+        'amount'         => 'nullable|numeric|min:0',
+        'tax'            => 'nullable|numeric|min:0',
+        'admission_fee'  => 'nullable|numeric|min:0',
+        'gross_amount'   => 'nullable|numeric|min:0',
+        'coupons_id'     => 'nullable|integer|exists:coupons,id',
+        'coupon_amount'  => 'nullable|numeric|min:0',
+        'pay_amount'     => 'nullable|numeric|min:0',
+        'due_amount'     => 'nullable|numeric|min:0',
+        'pay_status'     => 'nullable|string|max:255',
+        'start_date'     => 'required|date',
+        'end_date'       => 'required|date|after:start_date',
+        'locker_status'  => 'required|string|max:255',
+        'payment_mode'   => 'nullable|string|max:255',
+        'payment_date'   => 'nullable|date',
+        'payment_amount' => 'nullable|numeric|min:0',
+        'payment_note'   => 'nullable|string',
+        'payment_doc'    => 'nullable|string|max:255',
+        'payment_number' => 'nullable|string|max:255',
+        'payment_status' => 'nullable|string|max:255',
     ];
 
-    
+
 }

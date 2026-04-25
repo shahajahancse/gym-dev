@@ -63,7 +63,7 @@ Route::resource( 'lockerAssignments', 'LockerAssignmentController' );
 
 Route::resource( 'paymentMethods', 'PaymentMethodController' );
 
-// for offer 
+// for offer
 Route::resource( 'offers', 'Backend\OfferController' );
 // for package class
 Route::resource( 'packageClasses', 'Backend\ClassController' );
