@@ -17,7 +17,7 @@ class Expenses extends Model
 {
 
     public $table = 'expensess';
-    
+
 
 
 
@@ -50,5 +50,5 @@ class Expenses extends Model
         'amount' => 'required'
     ];
 
-    
+
 }

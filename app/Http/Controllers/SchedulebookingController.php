@@ -26,6 +26,7 @@ class SchedulebookingController extends AppBaseController
             ->join('members', 'members.id', '=', 'schedulebookings.member_id')
             ->join('assets_managements', 'assets_managements.id', '=', 'schedulebookings.asset_id');
 
+            /*
         if (if_can('male-access')) {
             $query->where('members.branch_id', 1); // Male branch
         } elseif (if_can('female-access')) {
@@ -37,8 +38,10 @@ class SchedulebookingController extends AppBaseController
         if (!if_can('show_all_data')) {
             $query->where('members.id', auth()->user()->member_id);
         }
+        */
 
-        $schedulebookings = if_can('show_all_data') ? $query->get() : $query->paginate(10);
+        $schedulebookings = $query->paginate(10);
+        // $schedulebookings = if_can('show_all_data') ? $query->get() : $query->paginate(10);
 
         return view('schedulebookings.index')
             ->with('schedulebookings', $schedulebookings);

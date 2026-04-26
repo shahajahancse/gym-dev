@@ -32,7 +32,7 @@ class MemberDataTable extends DataTable
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function query( Member $model )
-    {
+     {
         // Join with groups table and select relevant columns
         $query = $model->newQuery()
             ->leftJoin( 'users', 'members.id', '=', 'users.member_id' )
@@ -50,7 +50,7 @@ class MemberDataTable extends DataTable
 
         return $query->select( [
             'members.*',
-            'groups.name as group_name', 
+            'groups.name as group_name',
             'multi_branchs.branch_name',
         ] );
     }

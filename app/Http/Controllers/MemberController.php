@@ -31,19 +31,25 @@ class MemberController extends AppBaseController
      * @param MemberDataTable $memberDataTable
      * @return Response
      */
-    public function index( MemberDataTable $memberDataTable )
-    {
+    // public function index( MemberDataTable $memberDataTable )
+    // {
+    //     if ( !if_can( 'member_manage' ) ) {
+    //         return redirect()->back();
+    //     }
+    //     // dd($memberDataTable);
+    //     return $memberDataTable->render( 'members.index' );
+    // }
 
+    public function index( Request $request )
+    {
         if ( !if_can( 'member_manage' ) ) {
             return redirect()->back();
         }
-        // echo '<pre>';
-        // print_r($memberDataTable);
-        // echo '</pre>';
-        // exit;
-
-        // dd($memberDataTable);
-        return $memberDataTable->render( 'members.index' );
+        /** @var Member members */
+        $query = Member::select('members.*');
+        $members = $query->orderBy( 'members.id', 'desc' )->get();
+        // dd($members);
+        return view( 'members.index' )->with( 'members', $members );
     }
 
     /**
@@ -221,33 +227,27 @@ class MemberController extends AppBaseController
      */
     public function show( $id )
     {
-        /** @var Member $member */
         $member = Member::leftJoin( 'users', 'members.id', '=', 'users.member_id' )
             ->leftJoin( 'groups', 'users.group_id', '=', 'groups.id' )
-            ->select( 'members.*', 'users.group_id', 'groups.name as group_name, groups.id as groups_id' )
-            ->where( 'members.id', $id )
-            ->first();
+            ->select( 'members.*', 'users.group_id', 'groups.name as group_name, groups.id as groups_id' )->where( 'members.id', $id )->first();
         //dd($member->groups_id);
-
         if ( empty( $member ) ) {
             Flash::error( 'Member not found' );
-
             return redirect( route( 'members.index' ) );
         }
         $questions      = AdmissionQuestions::all();
         $locker_details = LockerAssignment::where( 'member_id', $member->id )
-            ->join( 'lockers', 'lockers.id', '=', 'lockerassignments.locker_id' )
-            ->first();
+            ->join( 'lockers', 'lockers.id', '=', 'lockerassignments.locker_id' )->first();
 
         return view( 'members.show' )->with( 'member', $member )
             ->with( 'questions', $questions )
             ->with( 'locker_details', $locker_details );
     }
+
     public function details( $id )
     {
         /** @var Member $member */
         $member = Member::find( $id );
-
         if ( empty( $member ) ) {
             Flash::error( 'Member not found' );
 

@@ -28,13 +28,13 @@
         ]) !!}
     </div>
 
-    <div class="form-group col-md-4">
+    {{-- <div class="form-group col-md-4">
         {!! Form::label('amount', 'Amount:', ['class' => 'control-label']) !!}
         {!! Form::number('amount', null, ['class' => 'form-control']) !!}
-    </div>
-</div>
+    </div> --}}
+{{-- </div> --}}
 
-<div class="row">
+{{-- <div class="row">
     <div class="form-group col-md-4">
         {!! Form::label('tax', 'Vat Percentage:', ['class' => 'control-label']) !!}
         {!! Form::number('tax', null, ['class' => 'form-control']) !!}
@@ -49,7 +49,8 @@
         {!! Form::label('gross_amount', 'Gross Amount:', ['class' => 'control-label']) !!}
         {!! Form::number('gross_amount', 0, ['class' => 'form-control']) !!}
     </div>
-
+</div> --}}
+{{-- <div class="row">
     <div class="form-group col-md-4">
         {!! Form::label('coupons_id', 'Coupon Code:', ['class' => 'control-label']) !!}
         {!! Form::text('coupons_id', null, ['class' => 'form-control', 'id' => 'coupons_id']) !!}
@@ -67,8 +68,9 @@
         {!! Form::label('pay_amount', 'Pay Amount:', ['class' => 'control-label']) !!}
         {!! Form::number('pay_amount', null, ['class' => 'form-control']) !!}
     </div>
+</div> --}}
 
-    <div class="form-group col-md-4">
+    {{-- <div class="form-group col-md-4">
         {!! Form::label('due_amount', 'Due Amount:', ['class' => 'control-label']) !!}
         {!! Form::number('due_amount', null, ['class' => 'form-control']) !!}
     </div>
@@ -80,8 +82,9 @@
             'readonly',
             'required' => 'required',
         ]) !!}
-    </div>
+    </div> --}}
 
+{{-- <div class="row"> --}}
     <div class="form-group col-md-4">
         {!! Form::label('start_date', 'Start Date:', ['class' => 'control-label']) !!}
         {!! Form::date('start_date', null, ['class' => 'form-control', 'required' => 'required']) !!}
@@ -99,7 +102,7 @@
 
 </div>
 
-<div class="row">
+{{-- <div class="row">
     <div class="col-md-12">
         <div class="row" style="display: flex;align-items: center;gap: 22px;">
             <h1>Payment Details</h1>
@@ -147,7 +150,7 @@
             {!! Form::select('payment_status', ['1' => 'Pending', '2' => 'Approved'], null, ['class' => 'form-control']) !!}
         </div>
     </div>
-</div>
+</div> --}}
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
@@ -162,7 +165,7 @@
                 var coupons_id = $(this).val();
                 $.ajax({
                     url: "{{ route('coupons.check') }}",
-                    type: "POST", 
+                    type: "POST",
                     data: {
                         '_token': "{{ csrf_token() }}",
                         'coupons_id': coupons_id

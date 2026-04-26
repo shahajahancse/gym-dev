@@ -6,7 +6,7 @@ Purchase Package @parent
 @stop
 
 @push('backend_css')
-    
+
 @endpush
 
 @section('content')
@@ -31,9 +31,9 @@ Purchase Package @parent
 @endsection
 
 @push('backend_js')
-    
+
     <script>
-       
+
         $(document).ready(function() {
             $('#member_id').select2({
                 theme: "classic",

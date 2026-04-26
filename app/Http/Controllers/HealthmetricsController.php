@@ -8,6 +8,7 @@ use App\Http\Requests\CreateHealthmetricsRequest;
 use App\Http\Requests\UpdateHealthmetricsRequest;
 use App\Models\Healthmetrics;
 use Flash;
+use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use Response;
 
@@ -19,9 +20,19 @@ class HealthmetricsController extends AppBaseController
      * @param HealthmetricsDataTable $healthmetricsDataTable
      * @return Response
      */
-    public function index(HealthmetricsDataTable $healthmetricsDataTable)
+    // public function index(HealthmetricsDataTable $healthmetricsDataTable)
+    // {
+    //     return $healthmetricsDataTable->render('healthmetrics.index');
+    // }
+    public function index( Request $request )
     {
-        return $healthmetricsDataTable->render('healthmetrics.index');
+        /** @var Healthmetrics healthmetrics */
+        $packages = Healthmetrics::select('healthmetricss.*', 'users.name')
+            ->leftJoin('users', 'users.member_id', '=', 'healthmetricss.member_id')
+            ->latest('healthmetricss.id')
+            ->get();
+        // dd($packages);
+        return view( 'healthmetrics.index' )->with( 'packages', $packages );
     }
 
     /**

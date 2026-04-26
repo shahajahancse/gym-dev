@@ -2,26 +2,28 @@
     <table class="table" id="lockerAssignments-table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Sl</th>
                 <th>Locker Id</th>
                 <th>Member Id</th>
+                <th>Member Name</th>
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Status</th>
-                <th>Created At</th>
+                {{-- <th>Created At</th> --}}
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($lockerAssignments as $key => $lockerAssignment)
             <tr>
-                <td>{{ $lockerAssignment->assignment_id }}</td>
-            <td>{{ $lockerAssignment->locker_number }}</td>
-            <td>{{ $lockerAssignment->member_name }}</td>
-            <td>{{ $lockerAssignment->start_date }}</td>
-            <td>{{ $lockerAssignment->end_date }}</td>
-            <td>{{ $lockerAssignment->status }}</td>
-            <td>{{ $lockerAssignment->created_at }}</td>
+                <td>{{ $lockerAssignments->firstItem() + $key }}</td>
+                <td>{{ $lockerAssignment->locker_number }}</td>
+                <td>{{ $lockerAssignment->member_unique_id }}</td>
+                <td>{{ $lockerAssignment->mem_name .' ' . $lockerAssignment->last_name }}</td>
+                <td>{{ $lockerAssignment->start_date }}</td>
+                <td>{{ $lockerAssignment->end_date }}</td>
+                <td>{{ $lockerAssignment->status }}</td>
+                {{-- <td>{{ $lockerAssignment->created_at }}</td> --}}
                 <td>
                     {!! Form::open(['route' => ['lockerAssignments.destroy', $lockerAssignment->assignment_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

@@ -21,12 +21,34 @@ $multi_branchs = DB::table('multi_branchs')->get();
 </div>
 
 
+<!-- Pack Regular admission fee Field -->
+<div class="form-group">
+    <div class="row">
+        {!! Form::label('regular_fee', 'Regular Admission Fee :',['class'=>'col-md-3 col-lg-3 col-12 control-label']) !!}
+        <div class="col-md-9 col-lg-9 col-12">
+            {!! Form::number('regular_fee', null, ['class' => 'form-control', 'required', 'id' => 'regular_fee']) !!}
+        </div>
+    </div>
+</div>
+
+
+<!-- Pack Offer / Discount Field -->
+<div class="form-group">
+    <div class="row">
+        {!! Form::label('discount', 'Offer / Discount :',['class'=>'col-md-3 col-lg-3 col-12 control-label']) !!}
+        <div class="col-md-9 col-lg-9 col-12">
+            {!! Form::number('discount', null, ['class' => 'form-control', 'required', 'id' => 'discount']) !!}
+        </div>
+    </div>
+</div>
+
+
 <!-- Pack Admission Fee Field -->
 <div class="form-group">
     <div class="row">
         {!! Form::label('pack_admission_fee', 'Pack Admission Fee:',['class'=>'col-md-3 col-lg-3 col-12 control-label']) !!}
         <div class="col-md-9 col-lg-9 col-12">
-            {!! Form::number('pack_admission_fee', null, ['class' => 'form-control', 'required']) !!}
+            {!! Form::number('pack_admission_fee', null, ['class' => 'form-control', 'required', 'id' => 'pack_admission_fee']) !!}
         </div>
     </div>
 </div>
