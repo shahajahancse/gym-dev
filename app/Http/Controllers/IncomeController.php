@@ -10,6 +10,7 @@ use App\Models\Income;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use Request;
 
 class IncomeController extends AppBaseController
 {
@@ -19,11 +20,12 @@ class IncomeController extends AppBaseController
      * @param IncomeDataTable $incomeDataTable
      * @return Response
      */
-    public function index(IncomeDataTable $incomeDataTable)
+    public function index(Request $request)
     {
-        return $incomeDataTable->render('incomes.index');
+        $query = Income::select('incomes.*');
+        $incomes = $query->orderBy('id', 'desc')->paginate();
+        return view('incomes.index')->with('incomes', $incomes);
     }
-
     /**
      * Show the form for creating a new Income.
      *
