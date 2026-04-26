@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Expenses @parent
+    Expenses @parent
 @stop
 
 @section('content')
@@ -33,7 +33,7 @@ Expenses @parent
         </div>
     </div>
     <div class="text-center">
-        
+        @include('adminlte-templates::common.paginate', ['records' => $expenses])
     </div>
 </div>
 @endsection

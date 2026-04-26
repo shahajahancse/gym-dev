@@ -227,33 +227,27 @@ class MemberController extends AppBaseController
      */
     public function show( $id )
     {
-        /** @var Member $member */
         $member = Member::leftJoin( 'users', 'members.id', '=', 'users.member_id' )
             ->leftJoin( 'groups', 'users.group_id', '=', 'groups.id' )
-            ->select( 'members.*', 'users.group_id', 'groups.name as group_name, groups.id as groups_id' )
-            ->where( 'members.id', $id )
-            ->first();
+            ->select( 'members.*', 'users.group_id', 'groups.name as group_name, groups.id as groups_id' )->where( 'members.id', $id )->first();
         //dd($member->groups_id);
-
         if ( empty( $member ) ) {
             Flash::error( 'Member not found' );
-
             return redirect( route( 'members.index' ) );
         }
         $questions      = AdmissionQuestions::all();
         $locker_details = LockerAssignment::where( 'member_id', $member->id )
-            ->join( 'lockers', 'lockers.id', '=', 'lockerassignments.locker_id' )
-            ->first();
+            ->join( 'lockers', 'lockers.id', '=', 'lockerassignments.locker_id' )->first();
 
         return view( 'members.show' )->with( 'member', $member )
             ->with( 'questions', $questions )
             ->with( 'locker_details', $locker_details );
     }
+
     public function details( $id )
     {
         /** @var Member $member */
         $member = Member::find( $id );
-
         if ( empty( $member ) ) {
             Flash::error( 'Member not found' );
 

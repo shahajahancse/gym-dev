@@ -10,6 +10,7 @@ use App\Models\Expenses;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use Request;
 
 class ExpensesController extends AppBaseController
 {
@@ -19,9 +20,11 @@ class ExpensesController extends AppBaseController
      * @param ExpensesDataTable $expensesDataTable
      * @return Response
      */
-    public function index(ExpensesDataTable $expensesDataTable)
+    public function index(Request $request)
     {
-        return $expensesDataTable->render('expenses.index');
+        $query = Expenses::select('expensess.*');
+        $expenses = $query->paginate();
+        return view('expenses.index')->with('expenses', $expenses);
     }
 
     /**

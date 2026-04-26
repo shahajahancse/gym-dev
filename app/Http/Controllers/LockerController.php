@@ -31,8 +31,7 @@ class LockerController extends AppBaseController
             $lockers = Locker::paginate(10);
         }
 
-        return view('lockers.index')
-            ->with('lockers', $lockers);
+        return view('lockers.index')->with('lockers', $lockers);
     }
 
     /**
