@@ -8,6 +8,7 @@ use App\Http\Requests\CreatePackageRequest;
 use App\Http\Requests\UpdatePackageRequest;
 use App\Models\Member;
 use App\Models\Package;
+use App\Models\PurchasePackage;
 use Flash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -228,7 +229,12 @@ class PackageController extends AppBaseController
         $to_date        = $data['to_date'];
         $member_id      = explode( ',', $data['member_id'] );
         $type           = $data['type'];
-        $member_details = Member::whereIn( 'id', $member_id )->get();
+        $member_details = PurchasePackage::leftJoin('members as m', 'm.id', '=', 'purchasepackages.member_id' )
+            ->leftJoin('packages', 'purchasepackages.package_id', '=', 'packages.id' )
+            ->select('purchasepackages.*', 'packages.pack_name', 'm.mem_name' )
+            ->whereBetween('purchasepackages.created_at', [date('Y-m-d 00:00:00', strtotime(date('Y-m-d', strtotime($from_date)))), date('Y-m-d 23:59:59', strtotime(date('Y-m-d', strtotime($to_date))))])
+            ->whereIn( 'm.id', $member_id )->orderBy('purchasepackages.id', 'desc' )->get();
+        // dd($member_details);
         return view( 'packages.report.purchase_report_view', compact( 'from_date', 'to_date', 'member_id', 'type', 'member_details' ) );
 
     }

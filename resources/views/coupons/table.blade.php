@@ -43,7 +43,7 @@
                     <td>{{ $value->amount }}</td>
                     <td>{{ date('Y-m-d', strtotime($value->expire_date)) }}</td>
                     <td>
-                        @if ($value->type == 1)
+                        @if ($value->type == 0)
                             <span class="badge badge-danger">Fixed</span>
                         @else
                             <span class="badge badge-success">Percent</span>

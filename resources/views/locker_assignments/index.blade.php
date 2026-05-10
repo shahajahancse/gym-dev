@@ -31,11 +31,9 @@ Locker Assignments @parent
         <div class="card-body">
             @include('locker_assignments.table')
         </div>
-    </div>
-    <div class="text-center">
-        
-        @include('adminlte-templates::common.paginate', ['records' => $lockerAssignments])
-
+        <div class="text-center" style="margin: -20px 0px 30px 30px !important">
+            @include('adminlte-templates::common.paginate', ['records' => $lockerAssignments])
+        </div>
     </div>
 </div>
 @endsection
