@@ -1,6 +1,6 @@
 @extends('layouts.app_frontend')
 @section('title')
- Gym Master | Not Access
+ Fitness Training | Not Access
 @endsection
 
 @section('content')

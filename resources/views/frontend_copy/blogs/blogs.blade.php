@@ -1,6 +1,6 @@
 @extends('layouts.app_frontend')
 @section('title')
-    Gym Master | Blogs
+    Fitness Training | Blogs
 @endsection
 
 @section('content')

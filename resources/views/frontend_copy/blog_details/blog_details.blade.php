@@ -1,7 +1,7 @@
 @extends('layouts.app_frontend')
 
 @section('title')
-Gym Master | Blog Details
+Fitness Training | Blog Details
 @endsection
 
 @section('content')

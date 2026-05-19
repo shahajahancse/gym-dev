@@ -1,6 +1,6 @@
 @extends('layouts.app_frontend')
 @section('title')
-    Gym Master | Pricing
+    Fitness Training | Pricing
 @endsection
 
 @section('content')

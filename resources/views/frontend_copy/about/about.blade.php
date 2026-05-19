@@ -1,6 +1,6 @@
 @extends('layouts.app_frontend')
 @section('title')
-    Gym Master | About Us
+    Fitness Training | About Us
 @endsection
 
 @section('content')
@@ -11,10 +11,10 @@
                     Are</h1>
 
                 <p class="mt-3 lg:mt-6 xl:mt-9 font-poppins text-15 lg:text-18 xl:text-20 leading-5 lg:leading-7">
-                    Gym Master is a comprehensive fitness management software designed by Mysoftheaven (BD) Ltd. to
+                    Fitness Training is a comprehensive fitness management software designed by Mysoftheaven (BD) Ltd. to
                     streamline and optimize the management of gyms, fitness centers, and wellness studios. Managing
                     memberships, schedules, trainers, payments, and facilities manually can be tedious and time-consuming.
-                    Gym Master consolidates these functions into one powerful platform, taking the hassle out of gym
+                    Fitness Training consolidates these functions into one powerful platform, taking the hassle out of gym
                     management and allowing businesses to focus on delivering exceptional fitness experiences.
 
                 </p>
@@ -33,11 +33,11 @@
             <div class="w-full lg:w-[50%]  py-3 px-2 lg:px-4">
                 <h1 class="text-[#01669B] text-30 ms-5 font-poppins font-[500]">Mission</h1>
                 <p class="font-poppins text-18 ps-2 mt-2 border-l-4 border-[#01669B]">
-                    Gym Master is committed to transforming fitness management by providing seamless, user-friendly
+                    Fitness Training is committed to transforming fitness management by providing seamless, user-friendly
                     solutions for gym owners and staff. Its mission is to simplify operational workflows, centralize member
                     and financial data, ensure transparency in services, support strategic growth with analytics, empower
                     clients through self-service tools, integrate with third-party systems, and enhance overall member
-                    satisfaction. By achieving these goals, Gym Master contributes to the success of fitness businesses and
+                    satisfaction. By achieving these goals, Fitness Training contributes to the success of fitness businesses and
                     the wellness of their clients.
                 </p>
             </div>
@@ -46,7 +46,7 @@
                 <h1 class="text-[#01669B] text-30 ms-5 font-poppins font-[500]">Vision</h1>
                 <p class="font-poppins text-18 ps-2 mt-2 border-l-4 border-[#01669B]">
                     "To be the leading provider of innovative and holistic fitness management solutions, empowering gyms and
-                    fitness centers to unlock their full potential. We envision a future where Gym Master is synonymous with
+                    fitness centers to unlock their full potential. We envision a future where Fitness Training is synonymous with
                     excellence, delivering unmatched services that enable fitness businesses to thrive in a competitive
                     industry. Through our unwavering commitment to innovation, integrity, and customer satisfaction, we
                     aspire to set new benchmarks in fitness management technology."

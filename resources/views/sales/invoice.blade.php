@@ -66,7 +66,7 @@
 <body>
     <div class="bill">
         <div class="brand">
-            {{(!empty($SiteSetting))?$SiteSetting->name:'Gym Master'}}
+            {{(!empty($SiteSetting))?$SiteSetting->name:'Fitness Training'}}
         </div>
         
         <div>RETAIL INVOICE</div>
