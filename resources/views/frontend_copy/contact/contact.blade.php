@@ -1,7 +1,7 @@
 @extends('layouts.app_frontend')
 
 @section('title')
-    Gym Master | Contact Us
+    Fitness Training | Contact Us
 @endsection
 
 @section('content')

@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-    <title>Gym Master Login</title>
+    <title>Fitness Training Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico')}}" />
     <!--page level css -->
@@ -27,7 +27,7 @@
                                 <span>@php
                                     $setting = DB::table('sitesettings')->first();
                                 @endphp
-                                {{(!empty($setting))?$setting->name:'Gym Master'}} - {{(!empty($setting))?$setting->slogan:'Gym Master'}}</span>
+                                {{(!empty($setting))?$setting->name:'Fitness Training'}} - {{(!empty($setting))?$setting->slogan:'Fitness Training'}}</span>
                             </h2>
                         </div>
                     </div>

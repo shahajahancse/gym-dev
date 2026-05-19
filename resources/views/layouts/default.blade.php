@@ -6,8 +6,8 @@
         @php
         $setting = DB::table('sitesettings')->first();
         @endphp
-        @section('title')| {{ !empty($setting) ? $setting->name : 'Gym Master' }} -
-        {{ !empty($setting) ? $setting->slogan : 'Gym Master' }} @show
+        @section('title')| {{ !empty($setting) ? $setting->name : 'Fitness Training' }} -
+        {{ !empty($setting) ? $setting->slogan : 'Fitness Training' }} @show
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">

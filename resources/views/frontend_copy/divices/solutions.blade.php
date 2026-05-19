@@ -1,6 +1,6 @@
 @extends('layouts.app_frontend')
 @section('title')
-    Gym Master | Devices
+    Fitness Training | Devices
 @endsection
 
 @section('content')
@@ -219,7 +219,7 @@
     <div class=" px-4 lg:px-0 lg:ps-20 lg:py-16 xl:py-10 lg:flex items-center  gap-8">
         <div class="w-full lg:w-[60%] relative">
             <div>
-                <h1 class="text-28 lg:text-40  font-poppins font-bold ">Manage Your Gym Institution with <span class="text-cayan">Gym Master</span> Comprehensive Online Management</h1>
+                <h1 class="text-28 lg:text-40  font-poppins font-bold ">Manage Your Gym Institution with <span class="text-cayan">Fitness Training</span> Comprehensive Online Management</h1>
                 <div class="flex items-center gap-4 mt-6">
                     <a href="{{ route('demu_request') }}"
                         class="bg-cayan rounded-[24px] px-3 py-1 text-white flex items-center gap-2 cursor-pointer  hover:bg-[#41b5f3] duration-300 ease-in-out hover:text-15">

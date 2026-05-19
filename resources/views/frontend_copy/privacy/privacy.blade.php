@@ -1,14 +1,14 @@
 @extends('layouts.app_frontend')
 @section('title')
-    Gym Master | Privacy Policy
+    Fitness Training | Privacy Policy
 @endsection
 
 @section('content')
     <div class="px-4 lg:px-20 mt-7 lg:mt-14 relative">
         <div class="w-[90%] lg:w-[80%] mx-auto">
             <h1 class="text-[#01669B] text-22 lg:text-28 xl:text-32 font-poppins font-[700] leading-7 text-center">Privacy
-                Policy for Gym Master</h1>
-            <p class="font-poppins text-14 lg:text-16 leading-7 mt-8">At Gym Master, we are dedicated to upholding the
+                Policy for Fitness Training</h1>
+            <p class="font-poppins text-14 lg:text-16 leading-7 mt-8">At Fitness Training, we are dedicated to upholding the
                 highest standards of data protection and ensuring the privacy of our clients. This privacy policy elucidates
                 how we collect, utilize, disclose, retain, and safeguard your information. Please review this policy
                 meticulously to comprehend how we safeguard your data</p>
@@ -50,7 +50,7 @@
 
                 </h1>
                 <p class="font-poppins text-14 lg:text-16 leading-7 mt-6">Your privacy and data security are of utmost
-                    importance to us at Gym Master. Should you have any queries or require further clarification regarding our
+                    importance to us at Fitness Training. Should you have any queries or require further clarification regarding our
                     privacy practices, please do not hesitate to reach out to us using the provided contact information.</p>
 
             </div>

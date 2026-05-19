@@ -1,6 +1,6 @@
 @extends('layouts.app_frontend')
 @section('title')
-    Gym Master | Demu Request
+    Fitness Training | Demu Request
 @endsection
 
 @section('content')
@@ -80,9 +80,9 @@
     <div class="px-4 lg:px-14 mt-10">
         <div class="w-full lg:flex gap-4">
             <div class="w-full  lg:w-[50%] px-0 lg:px-4">
-                <h1 class="text-36 lg:text-40  font-poppins font-bold leading-[62px]  mb-3 text-center">Gym Master Software
+                <h1 class="text-36 lg:text-40  font-poppins font-bold leading-[62px]  mb-3 text-center">Fitness Training Software
                 </h1>
-                <p class="text-16 lg:text-20 font-poppins leading-[28px] text-center lg:text-left"> Gym Master is
+                <p class="text-16 lg:text-20 font-poppins leading-[28px] text-center lg:text-left"> Fitness Training is
                     specifically designed to help gym owners and managers save time, improve member engagement, and
                     streamline their business operations.</p>
 
@@ -235,7 +235,7 @@
                         <input type="checkbox" id="termCheck"
                             class="w-[25px] h-[25px] shadow-lg  text-black font-poppins border border-[#DCE1E9]   focus:outline-none rounded me-3">
 
-                        <p class="text-black text-14 lg:text-16 font-poppins leading-5">I have read, understood, and agree to Gym Master Privacy Statement, including Cookie Use.</p>
+                        <p class="text-black text-14 lg:text-16 font-poppins leading-5">I have read, understood, and agree to Fitness Training Privacy Statement, including Cookie Use.</p>
                     </div>
 
                     <div class="flex items-center justify-center mt-5">

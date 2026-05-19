@@ -1,7 +1,7 @@
 @extends('layouts.app_frontend')
 
 @section('title')
-    Gym Master | Home
+    Fitness Training | Home
 @endsection
 
 <style>
@@ -69,7 +69,7 @@
                 <div class="w-full lg:w-[60%] h-auto">
                     <h1
                         class="text-30 xl:text-[36px]  font-bold font-poppins text-[#1F1F1F]">
-                        Simplify Your Gym Management with <span class="text-cayan">Gym Master Software</span>
+                        Simplify Your Gym Management with <span class="text-cayan">Fitness Training Software</span>
                     </h1>
 
                     <p
@@ -202,16 +202,16 @@
             <img src="{{ asset('frontend/assets/images/seba.png') }}" class="lg:w-[80%]" alt="Sheba img">
         </div>
         <div class="w-full lg:w-[50%] px-3">
-            <h1 class="font-poppins text-24 lg:text-28 xl:text-36  font-bold text-cayan">Why Gym Master Software?</h1>
+            <h1 class="font-poppins text-24 lg:text-28 xl:text-36  font-bold text-cayan">Why Fitness Training Software?</h1>
             <div class="mt-6">
-                <p class="font-poppins text-16 xl:text-20 font-normal leading-6 text-justify">Gym Master software can provide significant advantages for gym owners, managers, and staff due to its tailored features and user-friendly approach.GymMaster allows easy tracking of memberships, renewals, attendance, and member activity. This helps gyms maintain strong, organized member records and provide better service..</p>
+                <p class="font-poppins text-16 xl:text-20 font-normal leading-6 text-justify">Fitness Training software can provide significant advantages for gym owners, managers, and staff due to its tailored features and user-friendly approach.GymMaster allows easy tracking of memberships, renewals, attendance, and member activity. This helps gyms maintain strong, organized member records and provide better service..</p>
             </div>
         </div>
     </div>
 
     <div class="w-full px-4 lg:px-10  py-4 ">
         <div class="w-full my-3 text-center">
-            <h1 class="font-poppins text-28 lg:text-[30px] xl:text-40  leading-[62px] font-bold text-black"><span class="text-cayan">Gym Master</span>   Software Features</h1>
+            <h1 class="font-poppins text-28 lg:text-[30px] xl:text-40  leading-[62px] font-bold text-black"><span class="text-cayan">Fitness Training</span>   Software Features</h1>
         </div>
         @if ($features->count() == 3)
             <div class="w-full flex flex-wrap justify-center">
@@ -398,7 +398,7 @@
         class="w-full  lg:flex  items-center gap-7 px-4 lg:px-14  py-4  bg-gradient-to-l from-[#F2FCFE] via-blue-50 to-[#F8F4FE] ">
         <div class="w-full lg:w-[50%] p-5">
             <div class="my-2">
-                <h1 class="font-poppins text-22 lg:text-32  leading-[36px] font-bold">Benefits of GYM MASTER</h1>
+                <h1 class="font-poppins text-22 lg:text-32  leading-[36px] font-bold">Benefits of Fitness Training</h1>
             </div>
             <img src="{{ asset('frontend/assets/images/Benefits_of_gym.png') }}" alt="Sheba img">
         </div>
@@ -574,7 +574,7 @@
                     Transform your Gym Management Software</h1>
                 <div class="my-3">
                     <p class="text-black font-medium">
-                        Gym Master is a gym management software solution designed to help gym owners, fitness centers, health clubs, and studios efficiently manage their day-to-day operations. <br><br>
+                        Fitness Training is a gym management software solution designed to help gym owners, fitness centers, health clubs, and studios efficiently manage their day-to-day operations. <br><br>
                         –  Manages member records, memberships, and renewals, making it easy to track member status and engagement. <br><br>
                         – Integrates with payment gateways for secure online payments and automated billing, reducing manual processing and minimizing missed payments.
                     

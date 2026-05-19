@@ -291,7 +291,7 @@
                 <div class="row">
                     <div class="col-xl-12 wow fadeInUp">
                         <div class="wsus__copy_right mt_115 xs_mt_95">
-                            <p>2024 WebSolutionUs All Rights Reserved.</p>
+                            <p>&copy; <script>document.write(new Date().getFullYear());</script> BU CSE-65(Evening). All Rights Reserved.</p>
 
                             <ul class="d-flex flex-wrap">
                                 <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>

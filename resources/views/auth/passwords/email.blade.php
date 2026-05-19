@@ -27,7 +27,7 @@
                                                 @php
                                                     $setting = DB::table('sitesettings')->first();
                                                 @endphp
-                                                {{ !empty($setting) ? $setting->name : 'Gym Master' }} - 
+                                                {{ !empty($setting) ? $setting->name : 'Fitness Training' }} - 
                                                 {{ !empty($setting) ? $setting->slogan : 'Your Fitness Partner' }}
                                             </span>
                                         </h2>
