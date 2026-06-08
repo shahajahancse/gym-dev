@@ -23,7 +23,7 @@ class ExpensesController extends AppBaseController
     public function index(Request $request)
     {
         $query = Expenses::select('expensess.*');
-        $expenses = $query->paginate();
+        $expenses = $query->orderBy('id', 'desc')->paginate();
         return view('expenses.index')->with('expenses', $expenses);
     }
 

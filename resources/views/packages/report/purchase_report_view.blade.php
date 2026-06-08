@@ -13,86 +13,74 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        } 
+        }
         @media print {
             .btn{
                 display: none;
             }
-        }   
+        }
     </style>
 </head>
   <body>
-      <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div>
-                       @include('reports_header')
-                       <div class="title">Purchase Report</div>
-                       <div style="text-align: right;color: white;">
-                           <a onclick="print_w()" class="btn btn-primary">Print</a>
-                       </div>
+      <div class="container-fluid">
+            <div class="col-md-12">
+                <div>
+                    @include('reports_header')
+                    <div class="title">Purchase Report</div>
+                    <div style="text-align: right;color: white;">
+                        <a onclick="print_w()" class="btn btn-primary">Print</a>
                     </div>
+                </div>
 
-                </div>
-                <div class="col-md-12">
-                    @php
-                        $data_found=false;
-                    @endphp
-                    @foreach ($member_details as $key => $member)
-                      @php
-                      
-                        $purchasePackages = DB::table('purchasepackages')
-                            ->select('purchasepackages.*', 'packages.pack_name as pack_name', 'members.mem_name as member_name')
-                            ->join('packages', 'packages.id', '=', 'purchasepackages.package_id')
-                            ->join('members', 'members.id', '=', 'purchasepackages.member_id')
-                            ->where('purchasepackages.member_id', $member->id);
-                        $purchasePackages = $purchasePackages->whereBetween('purchasepackages.created_at', [date('Y-m-d 00:00:00', strtotime($from_date)), date('Y-m-d 23:59:59', strtotime($to_date))]);
-                        $purchasePackages = $purchasePackages->orderBy('purchasepackages.id', 'desc');
-                        $purchasePackages = $purchasePackages->get();
-                      @endphp
-                        @if(isset($purchasePackages) && count($purchasePackages)>0)
+            </div>
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Member Name</th>
+                            <th>Package Name</th>
+                            <th>Expired Date</th>
+                            <th>Amount</th>
+                            <th>Coupon Amt</th>
+                            <th>Gross Amount</th>
+                            <th>Pay Amount</th>
+                            <th>Due Amount</th>
+                            <th>Status</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($member_details as $key => $purchase)
                             @php
-                                $data_found=true;
+                                if ($purchase->status == 3) {
+                                    $status = 'Full Paid';
+                                } elseif ($purchase->status == 2) {
+                                    $status = 'Due';
+                                } else {
+                                    $status = 'Pending';
+                                }
                             @endphp
-                            @foreach ($purchasePackages as $key => $purchase)
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">{{$purchase->member_name}}</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Package Name</th>
-                                            <th>Expired Date</th>
-                                            <th>Gross Amount</th>
-                                            <th>Pay Amount</th>
-                                            <th>Due Amount</th>
-                                            <th>Status</th>
-                                            <th>Created At</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>{{$purchase->pack_name}}</td>
-                                            <td>{{$purchase->expired_date}}</td>
-                                            <td>{{$purchase->gross_amount}}</td>
-                                            <td>{{$purchase->pay_amount}}</td>
-                                            <td>{{$purchase->due_amount}}</td>
-                                            <td>{{$purchase->status}}</td>
-                                            <td>{{$purchase->created_at}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            @endforeach
-                        @endif
-                    @endforeach
-                    @if($data_found==false)
-                        <div class="alert alert-danger">No Data Found</div>
-                    @endif
-                </div>
+                            <tr>
+                                <td>{{$key + 1}}</td>
+                                <td>{{$purchase->mem_name}}</td>
+                                <td>{{$purchase->pack_name}}</td>
+                                <td>{{$purchase->expired_date}}</td>
+                                <td>{{$purchase->amount}}</td>
+                                <td>{{$purchase->coupon_amount}}</td>
+                                <td>{{$purchase->gross_amount}}</td>
+                                <td>{{$purchase->pay_amount}}</td>
+                                <td>{{$purchase->due_amount}}</td>
+                                <td>{{$status}}</td>
+                                <td>{{$purchase->created_at}}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
       </div>
 
-    
+
 
     <script type="text/javascript">
         function print_w() {

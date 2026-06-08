@@ -31,9 +31,9 @@
         <div class="card-body">
             @include('incomes.table')
         </div>
-    </div>
-    <div class="text-center">
-        @include('adminlte-templates::common.paginate', ['records' => $incomes])
+        <div class="text-center" style="margin: -20px 0px 30px 30px !important">
+            @include('adminlte-templates::common.paginate', ['records' => $incomes])
+        </div>
     </div>
 </div>
 @endsection

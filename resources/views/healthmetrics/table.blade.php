@@ -66,14 +66,14 @@
                     <td>
                         <div class='btn-group'>
                             @if (if_can('purchase-package-edit'))
-                            <a href="{{ route('packages.edit', [$value->id]) }}"
+                            <a href="{{ route('healthmetrics.edit', [$value->id]) }}"
                                 class='btn btn-outline-primary btn-xs'>
                                 <i class="im im-icon-Pen" data-toggle="tooltip" data-placement="top" title="Edit"></i>
                             </a>
                             @endif
 
                             @if (if_can('purchase-package-delete'))
-                            {!! Form::open(['route' => ['packages.destroy', $value->id], 'method' => 'delete']) !!}
+                            {!! Form::open(['route' => ['healthmetrics.destroy', $value->id], 'method' => 'delete']) !!}
                                 {!! Form::button('<i class="im im-icon-Remove" data-toggle="tooltip" data-placement="top" title="Delete"></i>', [
                                     'type' => 'submit',
                                     'class' => 'btn btn-outline-danger btn-xs',

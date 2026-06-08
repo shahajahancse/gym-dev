@@ -229,9 +229,10 @@ class PackageController extends AppBaseController
         $to_date        = $data['to_date'];
         $member_id      = explode( ',', $data['member_id'] );
         $type           = $data['type'];
-        $member_details = PurchasePackage::leftJoin('members as m', 'm.id', '=', 'purchasepackages.member_id' )
+        $member_details = PurchasePackage::select('purchasepackages.*', 'packages.pack_name', 'm.mem_name' )
+
+            ->leftJoin('members as m', 'm.id', '=', 'purchasepackages.member_id' )
             ->leftJoin('packages', 'purchasepackages.package_id', '=', 'packages.id' )
-            ->select('purchasepackages.*', 'packages.pack_name', 'm.mem_name' )
             ->whereBetween('purchasepackages.created_at', [date('Y-m-d 00:00:00', strtotime(date('Y-m-d', strtotime($from_date)))), date('Y-m-d 23:59:59', strtotime(date('Y-m-d', strtotime($to_date))))])
             ->whereIn( 'm.id', $member_id )->orderBy('purchasepackages.id', 'desc' )->get();
         // dd($member_details);
