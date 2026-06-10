@@ -50,6 +50,9 @@ Route::get( '/trainer', [HomeController::class, 'trainer'] )->name( 'trainer' );
 Route::get( '/membership', [HomeController::class, 'membership'] )->name( 'membership' );
 Route::get( '/blogs', [HomeController::class, 'blogs'] )->name( 'blogs' );
 Route::get( '/contact', [HomeController::class, 'contact'] )->name( 'contact' );
+Route::get( '/privacy-policy', [HomeController::class, 'privacy_policy'] )->name( 'privacy_policy' );
+Route::get( '/terms-conditions', [HomeController::class, 'terms_conditions'] )->name( 'terms_conditions' );
+Route::get( '/cookie-policy', [HomeController::class, 'cookie_policy'] )->name( 'cookie_policy' );
 
 //  fontend routes end
 

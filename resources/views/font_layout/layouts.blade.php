@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-        <title>@yield('GYM')</title>
+        <title>@yield('GYM', 'Home || WebSolutionUS')</title>
         <meta name="description" content="Home || WebSolutionUS">
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('uploads/custom-images/wsus-img-2024-10-29-10-42-30-1685.png') }}?v=2">

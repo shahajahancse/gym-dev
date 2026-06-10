@@ -1,9 +1,11 @@
 @extends('font_layout.layouts')
 @section('title')
-    Gym | Fitness
+Pricing || WebSolutionUS
 @endsection
 
-    @section('content')
+@section('GYM', 'Pricing || WebSolutionUS')
+
+@section('content')
 
         <section class="wsus__breadcrumb wow fadeInUp" style="background:url('{{ asset('uploads/website-images/breadcrumb-image.jpg') }}')">
             <div class="container">

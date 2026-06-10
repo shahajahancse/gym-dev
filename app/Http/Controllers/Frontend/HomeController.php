@@ -52,4 +52,19 @@ class HomeController extends Controller
     {
         return view( 'frontend.contact' );
     }
+
+    public function privacy_policy()
+    {
+        return view( 'frontend.pages.privacy_policy' );
+    }
+
+    public function terms_conditions()
+    {
+        return view( 'frontend.pages.terms_conditions' );
+    }
+
+    public function cookie_policy()
+    {
+        return view( 'frontend.pages.cookie_policy' );
+    }
 }

@@ -1,7 +1,9 @@
 @extends('font_layout.layouts')
 @section('title')
-Gym | Fitness
+About || WebSolutionUS
 @endsection
+
+@section('GYM', 'About || WebSolutionUS')
 
 @section('content')
 
