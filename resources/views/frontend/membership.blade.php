@@ -4,8 +4,8 @@
 @endsection
 
     @section('content')
-    
-        <section class="wsus__breadcrumb wow fadeInUp" style="background:url(uploads/website-images/breadcrumb-image.jpg)">
+
+        <section class="wsus__breadcrumb wow fadeInUp" style="background:url('{{ asset('uploads/website-images/breadcrumb-image.jpg') }}')">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -13,7 +13,7 @@
                             <h1>Pricing</h1>
                             <ul>
                                 <li>
-                                    <a href="index.html"><i
+                                    <a href="{{ url('/welcome') }}"><i
                                         class="fas fa-home-lg-alt"></i>Home</a>
                                 </li>
                                 <li>Pricing</li>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="wsus__testimonial_2_reviewer">
                                 <div class="wsus__slider_small_img">
-                                    <img src="uploads/custom-images/wsus-img-2024-06-03-10-11-15-3072.jpg" alt="review" class="img-fluid w-100">
+                                    <img src="{{ asset('uploads/custom-images/wsus-img-2024-06-03-10-11-15-3072.jpg') }}" alt="review" class="img-fluid w-100">
                                 </div>
                                 <div class="name">
                                     <h4 class="title">Rizvi</h4>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="wsus__testimonial_2_reviewer">
                                 <div class="wsus__slider_small_img">
-                                    <img src="uploads/custom-images/wsus-img-2024-08-15-10-28-12-5637.png" alt="review" class="img-fluid w-100">
+                                    <img src="{{ asset('uploads/custom-images/wsus-img-2024-08-15-10-28-12-5637.png') }}" alt="review" class="img-fluid w-100">
                                 </div>
                                 <div class="name">
                                     <h4 class="title">James R.</h4>
@@ -243,7 +243,7 @@
                             </div>
                             <div class="wsus__testimonial_2_reviewer">
                                 <div class="wsus__slider_small_img">
-                                    <img src="uploads/custom-images/wsus-img-2024-06-03-10-14-03-3508.jpg" alt="review" class="img-fluid w-100">
+                                    <img src="{{ asset('uploads/custom-images/wsus-img-2024-06-03-10-14-03-3508.jpg') }}" alt="review" class="img-fluid w-100">
                                 </div>
                                 <div class="name">
                                     <h4 class="title">Emily K.</h4>
@@ -261,7 +261,7 @@
                             </div>
                             <div class="wsus__testimonial_2_reviewer">
                                 <div class="wsus__slider_small_img">
-                                    <img src="uploads/custom-images/wsus-img-2024-08-15-10-24-56-5280.png" alt="review" class="img-fluid w-100">
+                                    <img src="{{ asset('uploads/custom-images/wsus-img-2024-08-15-10-24-56-5280.png') }}" alt="review" class="img-fluid w-100">
                                 </div>
                                 <div class="name">
                                     <h4 class="title">Mike T.</h4>
@@ -279,7 +279,7 @@
                             </div>
                             <div class="wsus__testimonial_2_reviewer">
                                 <div class="wsus__slider_small_img">
-                                    <img src="uploads/custom-images/wsus-img-2024-08-15-10-26-21-6301.png" alt="review" class="img-fluid w-100">
+                                    <img src="{{ asset('uploads/custom-images/wsus-img-2024-08-15-10-26-21-6301.png') }}" alt="review" class="img-fluid w-100">
                                 </div>
                                 <div class="name">
                                     <h4 class="title">Linda A.</h4>

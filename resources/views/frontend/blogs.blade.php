@@ -9,7 +9,7 @@ Gym | Fitness
             MENU END
         =============================-->
 
-        <section class="wsus__breadcrumb wow fadeInUp" style="background:url(uploads/website-images/breadcrumb-image.jpg)">
+        <section class="wsus__breadcrumb wow fadeInUp" style="background:url('{{ asset('uploads/website-images/breadcrumb-image.jpg') }}')">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -17,7 +17,7 @@ Gym | Fitness
                             <h1>Blogs</h1>
                             <ul>
                                 <li>
-                                    <a href="index.html"><i
+                                    <a href="{{ url('/welcome') }}"><i
                                         class="fas fa-home-lg-alt"></i>Home</a>
                                 </li>
                                 <li>Blogs</li>

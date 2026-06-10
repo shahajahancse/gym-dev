@@ -14,7 +14,7 @@ Gym | Fitness
                             <h1>About</h1>
                             <ul>
                                 <li>
-                                    <a href="index.html"><i
+                                    <a href="{{ url('/welcome') }}"><i
                                         class="fas fa-home-lg-alt"></i>Home</a>
                                 </li>
                                 <li>About</li>

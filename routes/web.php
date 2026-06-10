@@ -51,16 +51,6 @@ Route::get( '/membership', [HomeController::class, 'membership'] )->name( 'membe
 Route::get( '/blogs', [HomeController::class, 'blogs'] )->name( 'blogs' );
 Route::get( '/contact', [HomeController::class, 'contact'] )->name( 'contact' );
 
-
-
-// Route::get( '/solutions', [DeviceController::class, 'index'] )->name( 'solutions' );
-// Route::get( '/blog_details/{slug}', [BlogController::class, 'details'] )->name( 'blog_details' );
-// Route::get( '/contact_us', [ContactController::class, 'index'] )->name( 'contact' );
-// Route::post( '/contact_us', [ContactController::class, 'request_sent'] )->name( 'contact.sent' );
-// Route::get( '/demo/request', [DemuRequestController::class, 'index'] )->name( 'demu_request' );
-// Route::post( '/demo/request', [DemuRequestController::class, 'request_sent'] )->name( 'demu_request.sent' );
-// Route::get( '/about_us', [AboutController::class, 'index'] )->name( 'about' );
-// Route::get( '/no_access_page', [HomeController::class, 'no_access'] )->name( 'no_access' ); // No access page
 //  fontend routes end
 
 
