@@ -25,21 +25,31 @@ class HomeController extends Controller
 
     public function about_us()
     {
-        return view( 'frontend.' );
+        return view( 'frontend.about_us');
     }
 
-    public function privacy()
+    public function service()
     {
-        return view( 'frontend.privacy.privacy' );
+        return view( 'frontend.service' );
     }
 
-
-    public function terms_conditions()
+    public function trainer()
     {
-        return view( 'frontend.terms_conditions.terms_conditions' );
+        return view( 'frontend.trainer' );
     }
-    public function no_access()
+
+    public function membership()
     {
-        return view( 'frontend.no_access_page.no_access' );
+        return view( 'frontend.membership' );
+    }
+
+    public function blogs()
+    {
+        return view( 'frontend.blogs' );
+    }
+
+    public function contact()
+    {
+        return view( 'frontend.contact' );
     }
 }
